@@ -14,13 +14,13 @@ Master list. Answered questions move to the section note + [[Decisions Log]].
 - [x] Any car can max out
 - [ ] Stats shown on a car (speed, accel, handling, nitrous...?)
 ## 03 Upgrades & Parts
-- [ ] Final list of part slots
-- [ ] Part quality levels: how many, what names
-- [ ] Do parts unlock by level/rep, or just money?
-- [ ] Tuning sliders (grip vs drift, gear ratios)?
+- [x] Part slots → [[_Parts Index]]
+- [x] 6 levels → [[Part Levels]]
+- [x] Rep (night) + money
+- [ ] Which tuning options → [[Tuning]]
 ## 04 Performance & Tiers
-- [x] 100–500
-- [ ] Tier names and cutoffs
+- [x] 60–500, 6 tiers C/B/A/S/SS/Z
+- [x] Tier names and cutoffs → [[Tier Settings]]
 - [x] Tiers = classes, races locked by tier
 ## 05 World & Maps
 - [ ] Map size and setting (city, desert, mountains, coast?)

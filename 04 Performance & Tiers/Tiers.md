@@ -1,18 +1,16 @@
 > **Status:** 🟡 Draft. Nothing here is final until marked 🟢 Locked.
-
 # Tiers
 
-The PR number decides the car's tier. Cutoffs live in [[Tier Settings]].
-
-| Tier | Name | Look/color | Notes |
-|---|---|---|---|
-| | | | |
+A car's PR number decides its tier. **Tiers = classes**: the tier is the class the car races in.
+Exact cutoffs live in [[Tier Settings]].
 
 ## Confirmed
-- **Tiers = classes.** A car's tier is the class it races in. Races are locked by tier.
-- PR range is **100–500**. Cutoffs live in [[Tier Settings]].
-- **Sleeper** is the lowest tier: PR ≤ 150 *(cap not locked yet)*.
+- 6 tiers, lowest to highest: **C → B → A → S → SS → Z**
+- PR range **60–500**, about 73 points per tier
+- **Races are exact-tier only.** A car can't race in a tier above its own.
+- Players can **downgrade parts** to keep a car in a lower tier.
+- ~~Sleeper class~~ dropped.
 
 ## Open questions
-- [ ] Names for the other tiers
-- [ ] Can a car race in a tier ABOVE its own (underdog), or only its exact tier?
+- [ ] Color/badge for each tier
+- [ ] Does each tier have its own leaderboard?

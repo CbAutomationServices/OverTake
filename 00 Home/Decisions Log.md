@@ -17,3 +17,11 @@
 | 2026-11-12 | Tiers and classes are the SAME thing: a car's tier is its class, races are locked by tier | 04, 06 | Cristian |
 | 2026-11-12 | Car categories: JDM/tuner, American muscle, Euro/exotic, off-road/trucks; classic cars eventually | 02 | Cristian |
 | 2026-11-12 | 30+ cars at launch | 02 | Cristian |
+| 2026-11-12 | PR range changed to **60–500** (replaces 100–500) | 04 | Cristian |
+| 2026-11-12 | 6 tiers: C, B, A, S, SS, Z, about 73 PR each | 04 | Cristian |
+| 2026-11-12 | Sleeper class dropped | 04 | Cristian |
+| 2026-11-12 | Races are exact-tier only (no racing up) | 06 | Cristian |
+| 2026-11-12 | Players can downgrade parts to keep a car in a lower tier | 03, 04 | Cristian |
+| 2026-11-12 | Part slots: Engine, Suspension, Transmission, Turbo/Supercharger, Brakes, Tires, Nitrous | 03 | Cristian |
+| 2026-11-12 | 6 part levels: Stock → Street → Sport → Race → Pro → Elite | 03 | Cristian |
+| 2026-11-12 | Parts unlock with Rep (earned at night) + cost money to buy | 03, 07 | Cristian |
