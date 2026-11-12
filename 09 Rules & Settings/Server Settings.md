@@ -7,4 +7,5 @@ Max players per server, spawn rules, data saving.
 |---|---|---|
 | Day/hub servers | Free roam + hub, no cops | Confirmed |
 | Night servers | Separate; teleport in when choosing night; AI cops active | Confirmed |
-| Max players per server | TBD | |
+| Max players per hub server | ~20 | Confirmed |
+| Max players per night server | TBD | |

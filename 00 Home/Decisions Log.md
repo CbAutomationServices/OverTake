@@ -42,3 +42,24 @@
 | 2026-11-12 | 5 wanted levels | 08 | Cristian |
 | 2026-11-12 | Higher wanted = reward multiplier (more Rep & Cash) | 07, 08 | Cristian |
 | 2026-11-12 | Cops can be escaped by breaking line of sight | 08 | Cristian |
+| 2026-11-12 | World = a medium-size base map (the Hub) + separate individual maps added over time | 05 | Cristian |
+| 2026-11-12 | Hub: Heat-like but unnamed location; dealership, shop, car-meet parking lot, race loop, off-road area | 05 | Cristian |
+| 2026-11-12 | Individual maps will be based on real places | 05 | Cristian |
+| 2026-11-12 | Road types: highways, city streets, dirt/off-road | 05 | Cristian |
+| 2026-11-12 | Hub buildings sit in the center of the base map | 05 | Cristian |
+| 2026-11-12 | Hub race loop = closed track (no traffic, races only) | 05 | Cristian |
+| 2026-11-12 | Hub off-road = open dirt playground + a race trail through it | 05 | Cristian |
+| 2026-11-12 | No AI traffic in the hub | 05 | Cristian |
+| 2026-11-12 | First real-place maps: Tokyo/Japan, Los Angeles/SoCal, Miami/Florida | 05 | Cristian |
+| 2026-11-12 | Night (cops, street races, wanted) happens on the real-place maps; hub stays a safe day hangout | 05, 08 | Cristian |
+| 2026-11-12 | Menu shows events on each map, but to travel/teleport or join races you must enter the garage | 05, 10 | Cristian |
+| 2026-11-12 | Focus on the hub first; Tokyo is the likely first real map | 05 | Cristian |
+| 2026-11-12 | Hub track = oval, Indy 500 style | 05 | Cristian |
+| 2026-11-12 | Oval sits off to one side of the hub | 05 | Cristian |
+| 2026-11-12 | Car meet lot: parking spots to show off cars | 05 | Cristian |
+| 2026-11-12 | Side area next to the meet lot for street takeovers & donuts | 05 | Cristian |
+| 2026-11-12 | Drag racing area separate, probably along the freeway | 05, 06 | Cristian |
+| 2026-11-12 | ~20 players per hub server | 09 | Cristian |
+| 2026-11-12 | Get in/out of cars is zone-based (e.g. meet lot, dealership, shop) | 05, 09 | Cristian |
+| 2026-11-12 | Only the owner drives; friends can ride as passengers | 09 | Cristian |
+| 2026-11-12 | Cars collide normally in the hub but take no damage | 09 | Cristian |
