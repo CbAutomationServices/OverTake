@@ -1,21 +1,21 @@
+> **Status:** 🟡 Draft. Nothing here is final until marked 🟢 Locked.
+
 # Game Overview
 
-**Working title:**
-**Genre:** (obby / tycoon / simulator / horror / RPG / other)
-**One-sentence pitch:**
+**Working title:** OverTake
+**Genre:** Car racing / car collecting & upgrading
+**Inspiration:** [[Inspiration - NFS Heat]]
+**One-sentence pitch:** *(to write together)*
 
-## Target player
-- Age range:
-- What games they already play:
+## Confirmed
+- Buy any car you want → [[_Car Index]]
+- Upgrade engine, suspension, transmission, etc. → [[_Parts Index]]
+- Every car has a performance number → [[Performance Rating]]
+- The number puts the car in a tier → [[Tiers]]
 
-## What makes it fun / different
--
+## Assumed (not confirmed yet)
+- Shared multiplayer server where players race each other
+- Typical Roblox audience (about 10–16)
 
-## Monetization (game passes, dev products)
--
-
-## Milestones
-- [ ] Prototype: core loop playable
-- [ ] Alpha: main features in, ugly is fine
-- [ ] Beta: friends playtest
-- [ ] Launch
+## Open
+See [[Open Questions]] → 01 Game Design.
