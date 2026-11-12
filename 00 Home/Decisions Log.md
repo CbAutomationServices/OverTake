@@ -63,3 +63,14 @@
 | 2026-11-12 | Get in/out of cars is zone-based (e.g. meet lot, dealership, shop) | 05, 09 | Cristian |
 | 2026-11-12 | Only the owner drives; friends can ride as passengers | 09 | Cristian |
 | 2026-11-12 | Cars collide normally in the hub but take no damage | 09 | Cristian |
+| 2026-11-12 | Hub reference: NFS Heat starting area (similar feel, not a copy) | 05 | Cristian |
+| 2026-11-12 | No coastline/water for now | 05 | Cristian |
+| 2026-11-12 | Garage can be near the oval, but doesn't have to be right next to it | 05 | Cristian |
+| 2026-11-12 | Garage is its own building, between the hub center and the oval | 05 | Cristian |
+| 2026-11-12 | Add a gas station to the hub; gas stations repair/heal your car like NFS Heat | 05, 08 | Cristian |
+| 2026-11-12 | Hub gas station is mostly looks/vibe (no damage in hub) | 05 | Cristian |
+| 2026-11-12 | Night gas stations: full repair, but limited to 1–3 uses depending on your car | 08 | Cristian |
+| 2026-11-12 | Gas stations work during cop chases | 08 | Cristian |
+| 2026-11-12 | Gas stations also refill nitrous | 03, 08 | Cristian |
+| 2026-11-12 | Gas repairs per night: 1 for cars under ~250 PR, 2 above; 3rd repair = Premium booster (bought with Robux) | 07, 08 | Cristian |
+| 2026-11-12 | Repair uses reset each new night | 08 | Cristian |

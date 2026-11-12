@@ -5,13 +5,19 @@
 **Use:** inspiration for the [[Hub]] layout. Similar feel, **not a copy**.
 
 ## What stands out in the reference
-- A **big speedway/track complex** takes up one whole side, with roads wrapping around it
-- The **garage/safehouse** sits at a main road junction, right by the track entrance
-- **Water/coastline** along one edge, with a road hugging the shore
-- **Commercial blocks** (shops, dealership, gas station) packed on the other side of the track
-- **Dirt/sandy open ground** at the edge of the map
-- **Event start points** sprinkled close to the hub, so races are a short drive away
-- A **day/night toggle** on the map screen
+- Big speedway/track complex on one side, roads wrapping around it
+- Garage/safehouse at a main junction near the track entrance
+- Coastline along one edge
+- Shops/dealership/gas station packed on the other side of the track
+- Dirt/sand open ground at the map edge
+- Event start points close to the hub
 
-## What we keep vs change
-*(TBD with Cristian)*
+## Keep vs change
+| Idea | Decision |
+|---|---|
+| Track complex on one side | ✅ Keep (oval off to one side) |
+| Shops clustered together | ✅ Keep (hub center) |
+| Dirt area at the edge | ✅ Keep (off-road area) |
+| Coastline | ❌ Not for now |
+| Garage right at the track | 🔄 Own building between hub center and oval; doesn't have to touch the track |
+| Events close to the hub | *(TBD)* |

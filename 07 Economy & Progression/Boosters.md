@@ -3,6 +3,9 @@
 
 Bought with Premium. Earn cash or rep faster.
 
+## Booster ideas (confirmed)
+- **Extra Repair:** +1 gas station repair for a night
+
 ## Open questions
 - [ ] Multiplier (2x?) and duration (30 min? 1 hr?)
 - [ ] Do they stack?

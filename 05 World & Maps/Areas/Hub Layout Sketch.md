@@ -7,7 +7,7 @@
 |                                                           |
 |  [ CITY STREETS ]                                         |
 |                                                           |
-|         [   HUB CENTER    ] [ TAKEOVER AREA ]   ( OVAL  ) |
+|         [   HUB CENTER    ] [ TAKEOVER AREA ] [GARAGE] ( OVAL ) |
 |         [ Dealership, Shop] [ donuts/burnouts]  ( TRACK ) |
 |         [  Car meet lot   ]                     (       ) |
 |                                                           |
@@ -17,5 +17,6 @@
 ```
 
 - Confirmed: hub center in the middle, oval off to one side, takeover area beside the meet lot, drag strip along the freeway.
+- Garage is its own building between the hub center and the oval.
 - Exact positions are still a guess.
 - Back to [[Hub]]

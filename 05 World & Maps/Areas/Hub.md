@@ -21,6 +21,10 @@ Players spawn here, show off cars, hang out, and travel to the other maps from h
 - **Collisions:** normal, but no damage → [[Game Rules]]
 - **Roads:** highways, city streets, dirt/off-road
 - Layout sketch: [[Hub Layout Sketch]]
+- Reference: [[Hub Reference - NFS Heat]] (similar feel, not a copy)
+- **No coastline/water** for now
+- **Gas station**: drive through to repair your car (like Heat) → [[Gas Stations]]
+- **Garage**: its own building, between the hub center and the oval (near the oval is fine, not necessarily next to it)
 
 ## Open questions
 - [ ] Exact list of exit zones (meet lot, dealership, shop, takeover area?)
