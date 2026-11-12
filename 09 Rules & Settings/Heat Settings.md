@@ -9,7 +9,7 @@ Heat levels, cop counts, bust penalties.
 | Reward multiplier per level | TBD | |
 | Escape time out of sight | TBD | |
 | Bust penalty | Lose all unbanked night cash | Confirmed |
-| Gas station repairs per night | 1 under ~250 PR, 2 at ~250+ | Cutoff may snap to a tier edge |
+| Gas station repairs per night | C/B/A = 1, S/SS/Z = 2 | Confirmed |
 | Extra repair booster | +1 (Premium) | Confirmed |
 | Repair uses reset | Each new night | Confirmed |
 | Gas station refills nitrous | Yes | Confirmed |

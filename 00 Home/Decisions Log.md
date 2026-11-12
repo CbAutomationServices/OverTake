@@ -74,3 +74,4 @@
 | 2026-11-12 | Gas stations also refill nitrous | 03, 08 | Cristian |
 | 2026-11-12 | Gas repairs per night: 1 for cars under ~250 PR, 2 above; 3rd repair = Premium booster (bought with Robux) | 07, 08 | Cristian |
 | 2026-11-12 | Repair uses reset each new night | 08 | Cristian |
+| 2026-11-12 | Repair cutoff snapped to tier edge: C/B/A = 1 repair, S/SS/Z = 2 (replaces ~250 PR) | 08 | Cristian |
