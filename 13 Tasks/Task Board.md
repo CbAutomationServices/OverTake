@@ -9,6 +9,9 @@
 - [ ] Answer Open Questions: 06–08 Races, Economy, Police
 - [ ] Answer Open Questions: 10 UI
 
+## 🧪 Tech tests (allowed during planning)
+- [ ] Drift test: can we get the NFS Heat drift feel in Roblox?
+
 ## 🔨 Building (locked until planning is done)
 
 ## ✅ Done

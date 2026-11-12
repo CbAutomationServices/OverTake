@@ -13,8 +13,15 @@
 - Every car has a performance number → [[Performance Rating]]
 - The number puts the car in a tier → [[Tiers]]
 
+- Multiplayer: free-roam open world + race menu/matchmaking
+- Hangout hub with dealership, workshop, track → [[Hub]]
+- Real-looking cars with made-up names
+- Day/night cycle → [[World Settings]]
+- Cops & heat → [[Heat System]]
+- Visual customization → [[Visual Customization]]
+- Drift & drag events → [[Drift]], [[Drag]]
+
 ## Assumed (not confirmed yet)
-- Shared multiplayer server where players race each other
 - Typical Roblox audience (about 10–16)
 
 ## Open

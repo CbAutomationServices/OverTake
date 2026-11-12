@@ -9,4 +9,13 @@ Car stats/prices are NOT stored here: each car's numbers live in [[Car Stats]] (
 |---|---|---|---|---|
 | *(none yet)* | | | | |
 
+## Categories
+- JDM / tuner
+- American muscle
+- Euro / exotic
+- Off-road / trucks
+- Classics *(later update)*
+
+**Launch goal:** 30+ cars
+
 How stats work: [[Car Stats Explained]]

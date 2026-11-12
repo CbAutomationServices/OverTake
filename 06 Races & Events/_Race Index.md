@@ -6,4 +6,5 @@ One note per race type in `06 Races & Events/Types/`. Payouts/timers in [[Race S
 
 | Race type | Players | Status |
 |---|---|---|
-| | | |
+| [[Drift]] | TBD | 🟡 |
+| [[Drag]] | TBD | 🟡 |
