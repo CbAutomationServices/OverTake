@@ -1,0 +1,7 @@
+# Per-person Obsidian layout files (keeps you two from constantly conflicting)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.trash/
+.DS_Store
+Thumbs.db
