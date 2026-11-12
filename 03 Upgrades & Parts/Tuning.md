@@ -11,6 +11,9 @@
 | Suspension stiffness | ✅ Easy | Spring/damper values |
 | Grip ↔ drift slider | ✅ Doable, needs testing | Changes rear tire grip + steering; tied to the drift tech test |
 
+## Confirmed
+- Options: **Grip ↔ Drift slider** and **Suspension stiffness**
+- Tuning **nudges PR slightly** (amount → [[PR Settings]])
+
 ## Open questions
-- [ ] Which tuning options do we want?
-- [ ] Does tuning change PR, or is it free "feel only"?
+- [ ] Can tuning push a car across a tier line, or is it capped so it can't?

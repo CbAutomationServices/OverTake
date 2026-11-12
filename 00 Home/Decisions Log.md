@@ -25,3 +25,7 @@
 | 2026-11-12 | Part slots: Engine, Suspension, Transmission, Turbo/Supercharger, Brakes, Tires, Nitrous | 03 | Cristian |
 | 2026-11-12 | 6 part levels: Stock → Street → Sport → Race → Pro → Elite | 03 | Cristian |
 | 2026-11-12 | Parts unlock with Rep (earned at night) + cost money to buy | 03, 07 | Cristian |
+| 2026-11-12 | Tuning options: Grip ↔ Drift slider + Suspension stiffness | 03 | Cristian |
+| 2026-11-12 | Tuning nudges PR slightly | 03, 04 | Cristian |
+| 2026-11-12 | Forced induction = one slot, pick turbo OR supercharger; each must FEEL different; variants like dual turbo, centrifugal supercharger | 03 | Cristian |
+| 2026-11-12 | Cars cost money only, no Rep needed | 02, 07 | Cristian |
