@@ -29,3 +29,16 @@
 | 2026-11-12 | Tuning nudges PR slightly | 03, 04 | Cristian |
 | 2026-11-12 | Forced induction = one slot, pick turbo OR supercharger; each must FEEL different; variants like dual turbo, centrifugal supercharger | 03 | Cristian |
 | 2026-11-12 | Cars cost money only, no Rep needed | 02, 07 | Cristian |
+| 2026-11-12 | 3 currencies: Cash, Rep, Premium (Robux-bought) | 07 | Cristian |
+| 2026-11-12 | Premium buys boosters (faster cash/rep) and loot boxes | 07 | Cristian |
+| 2026-11-12 | Busted at night = lose that night's cash | 08 | Cristian |
+| 2026-11-12 | New players pick 1 of 3 starter cars | 02, 07 | Cristian |
+| 2026-11-12 | Day/night: player chooses (not a shared server cycle) | 05 | Cristian |
+| 2026-11-12 | Like Heat: once you go into night, the only safe way back is a safehouse | 08 | Cristian |
+| 2026-11-12 | Cops are AI only | 08 | Cristian |
+| 2026-11-12 | Cop difficulty = your car level + that night's wanted level; more races → higher wanted → bigger & better AI | 08 | Cristian |
+| 2026-11-12 | Premium can't buy cars/parts, only boosters, loot boxes, cosmetics | 07 | Cristian |
+| 2026-11-12 | Night = separate servers; choosing night teleports you to a night server with other night players | 05, 08, 11 | Cristian |
+| 2026-11-12 | 5 wanted levels | 08 | Cristian |
+| 2026-11-12 | Higher wanted = reward multiplier (more Rep & Cash) | 07, 08 | Cristian |
+| 2026-11-12 | Cops can be escaped by breaking line of sight | 08 | Cristian |

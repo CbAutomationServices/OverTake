@@ -11,3 +11,5 @@ Planning only, nothing built yet. Each vault section maps to its own script/modu
 | 06 Races | RaceManager | Server Script |
 | 07 Economy | EconomyService | Server Script |
 | — | PlayerData (saving) | Server Script |
+| 08 Heat | CopAI + HeatManager | Server Script (night servers only) |
+| 05/09 Server | DayNightTeleport | Server Script (TeleportService) |
