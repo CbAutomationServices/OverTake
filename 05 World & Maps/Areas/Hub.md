@@ -11,7 +11,7 @@ Players spawn here, show off cars, hang out, and travel to the other maps from h
 - **Shop / workshop**: upgrades & customization → [[Upgrade Shop]], [[Visual Customization]]
 - **Car-meet parking lot**: parking spots to show off cars
 - **Takeover area** (beside the meet lot): street takeovers, donuts, burnouts
-- **Drag strip**: separate area, probably along the freeway
+- **Drag strip**: separate area along the north edge (freeway removed 2026-11-14)
 - **Oval track** (Indy 500 style): closed, no traffic, races only, **off to one side** of the hub
 - **Garage**: the only way to travel to other maps or join races (menu can *show* events, garage *enters* them) → [[Garage]]
 - **Day only / safe zone**: no cops in the hub
@@ -19,7 +19,7 @@ Players spawn here, show off cars, hang out, and travel to the other maps from h
 - **No AI traffic** in the hub
 - **On foot:** zone-based; you can only get out in set zones → [[Game Rules]]
 - **Collisions:** normal, but no damage → [[Game Rules]]
-- **Roads:** highways, city streets, dirt/off-road
+- **Roads:** city streets, main avenues, dirt/off-road (no freeway in the hub)
 - Layout sketch: [[Hub Layout Sketch]]
 - Reference: [[Hub Reference - NFS Heat]] (similar feel, not a copy)
 - **No coastline/water** for now

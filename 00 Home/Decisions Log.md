@@ -75,3 +75,6 @@
 | 2026-11-12 | Gas repairs per night: 1 for cars under ~250 PR, 2 above; 3rd repair = Premium booster (bought with Robux) | 07, 08 | Cristian |
 | 2026-11-12 | Repair uses reset each new night | 08 | Cristian |
 | 2026-11-12 | Repair cutoff snapped to tier edge: C/B/A = 1 repair, S/SS/Z = 2 (replaces ~250 PR) | 08 | Cristian |
+| 2026-11-14 | City extended to fill the NW corner (west edge to N-S avenue, main avenue to drag strip) | 05 | Cristian |
+| 2026-11-14 | Freeway removed from the hub; drag strip stays where it is | 05 | Cristian |
+| 2026-11-14 | Drag strip becomes a full complex (Texas Motorplex-style): 2 lanes split, Christmas tree light pole in the middle, tower behind the start, grandstands on both sides, built into the north edge of the city | 05, 06 | Cristian |
