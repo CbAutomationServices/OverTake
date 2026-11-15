@@ -11,6 +11,7 @@
 | [[Miami]] | Miami / Florida | TBD | 🟡 idea |
 
 - Hub layout: [[Hub Layout Sketch]]
+- City inside the hub: [[City]]
 - World-wide settings (day/night, weather, traffic): [[World Settings]]
 
 ## Open questions

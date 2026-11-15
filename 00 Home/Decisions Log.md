@@ -78,3 +78,4 @@
 | 2026-11-14 | City extended to fill the NW corner (west edge to N-S avenue, main avenue to drag strip) | 05 | Cristian |
 | 2026-11-14 | Freeway removed from the hub; drag strip stays where it is | 05 | Cristian |
 | 2026-11-14 | Drag strip becomes a full complex (Texas Motorplex-style): 2 lanes split, Christmas tree light pole in the middle, tower behind the start, grandstands on both sides, built into the north edge of the city | 05, 06 | Cristian |
+| 2026-11-14 | City v2: Seattle/PNW-inspired, realistic Roblox art style; extended south to the off-road area; Sky Needle, plaza, public market, parking garages, strip malls, city gas station, back alleys, residential | 05 | Cristian |
