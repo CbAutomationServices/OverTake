@@ -13,6 +13,7 @@
 - Hub layout: [[Hub Layout Sketch]]
 - City inside the hub: [[City]]
 - Off-road park: [[Off-Road Park]]
+- Whole-map terrain + mountains: [[Hub Terrain]]
 - Dealership + meet lot: [[Dealership and Meet Lot]]
 - Hub fill-in areas: [[Hub Fill]]
 - Speedway + stunt park: [[OverTake Speedway]]
