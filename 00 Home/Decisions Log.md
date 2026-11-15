@@ -87,3 +87,4 @@
 | 2026-11-14 | Car show field removed | 05 | Cristian |
 | 2026-11-14 | One gas station prefab (OVERTAKE FUEL) used for all gas stations; placed at hub + city; hub surroundings landscaped | 05, 08 | Cristian |
 | 2026-11-14 | Workshop built as a reusable prefab (OVERTAKE PERFORMANCE): 4 bays, dyno, lifts, alignment, paint booth, office; placed in the hub | 05, 10 | Cristian |
+| 2026-11-14 | Oval rebuilt as OverTake Speedway (NFS Heat stadium inspired) next to the off-road park, with infield stunt park; old oval removed | 05, 06 | Cristian |
