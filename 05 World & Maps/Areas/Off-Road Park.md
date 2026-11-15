@@ -5,17 +5,17 @@ South of the city. Built mostly with **Terrain** (dirt, mud, grass, rock) so jum
 Studio: `OverTake_Hub > Off-Road Park` (parts) + Terrain. Layout data in `ServerStorage.OffroadData`. Old part version backed up in ServerStorage.
 Inspiration: real motocross tracks (red clay layout, PNW forest track, hillside track with yellow stakes).
 
-## MX track (west side)
-Closed loop, 4 straights joined by banked berms + a back straight:
+## MX track (west side), v2 bigger (2026-11-14)
+Map extended **west past the old edge** (terrain ground to x -2100) to fit it. ~2x longer than v1, **44-stud lanes**, **60-radius berms** banked 22° with mud lips.
 | Section | Features |
 |---|---|
-| Start straight | Start gate ("OVERTAKE MX"), big tabletop, roller |
-| Straight 2 | Whoops section (10 bumps), double jump |
-| Straight 3 | Step-up plateau, triple jump |
-| Straight 4 | Rhythm of 3 small tables, checkered finish line |
-| Back straight | 3 rollers |
-| Berms | Banked ~22° with a mud lip; hay bales on the outside |
-Extras: yellow course stakes, bleachers with red roof, announcer tower, tire stacks, grass mounds in the infield.
+| Start straight (z 680) | Start gate ("OVERTAKE MX"), huge tabletop, 2 rollers, step-down into berm 1 |
+| Straight 2 (z 800) | 16-bump whoops section, big double, roller |
+| Straight 3 (z 920) | Step-up plateau, big triple, 3 rollers |
+| Straight 4 (z 1040) | Rhythm of 4 tables, a double, checkered finish line |
+| Back straight (x -1920) | 4 rollers |
+Extras: 260-stud bleachers with red roof, announcer tower, pit area with 4 tents, hay bales around every berm, tire stacks, yellow stakes, infield grass mounds. Old v1 dressing backed up in ServerStorage.
+West edge framed by new hills + ~290 evergreens. Hills were smoothed (no more stair-step rings).
 
 ## Trails + forest
 - ~3,800-stud trail loop from the trailhead through rolling hills, past Titan Rock and through a rock arch
@@ -25,6 +25,7 @@ Extras: yellow course stakes, bleachers with red roof, announcer tower, tire sta
 ## Titan Rock (landmark)
 - ~330-stud stacked basalt/rock formation with basalt columns and scree at the base
 - Red beacon light on top (visible at night), name plaque at the foot
+- **Titan Tunnel** (added 2026-11-14): drivable tunnel straight through the base (~312 studs of road, ~160 inside the rock), rounded ceiling, concrete portals with signs, warm ceiling lights, yellow wall stripes; both ends join the trail loop
 
 ## Entrance + connection to the city
 - Log arch "OVERTAKE OFF-ROAD PARK" off the city's south street (x -950)

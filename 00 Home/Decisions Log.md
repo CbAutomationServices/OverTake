@@ -80,3 +80,5 @@
 | 2026-11-14 | Drag strip becomes a full complex (Texas Motorplex-style): 2 lanes split, Christmas tree light pole in the middle, tower behind the start, grandstands on both sides, built into the north edge of the city | 05, 06 | Cristian |
 | 2026-11-14 | City v2: Seattle/PNW-inspired, realistic Roblox art style; extended south to the off-road area; Sky Needle, plaza, public market, parking garages, strip malls, city gas station, back alleys, residential | 05 | Cristian |
 | 2026-11-14 | Off-road park v2 built with Roblox Terrain: MX track, trail loop through forested hills, Titan Rock monument, rock arch, entrance/lot, Ridge neighborhood linking it to the city; ground extended south to z 2300 | 05, 06 | Cristian |
+| 2026-11-14 | Tunnel through Titan Rock; lighting softened (less bloom, more contrast) + terrain grass blades on for a crisper look | 05, 09 | Cristian |
+| 2026-11-14 | MX track rebuilt ~2x bigger (44-stud lanes, 60-radius berms); map extended west to fit; hills smoothed | 05, 06 | Cristian |
