@@ -83,3 +83,5 @@
 | 2026-11-14 | Tunnel through Titan Rock; lighting softened (less bloom, more contrast) + terrain grass blades on for a crisper look | 05, 09 | Cristian |
 | 2026-11-14 | MX track rebuilt ~2x bigger (44-stud lanes, 60-radius berms); map extended west to fit; hills smoothed | 05, 06 | Cristian |
 | 2026-11-14 | MX grandstand detailed; track dirt recolored with ruts + braking bumps | 05 | Cristian |
+| 2026-11-14 | Dealership (OverTake Motors) + car meet lot detailed; empty hub areas filled (west strip businesses, tuner district, car show field, park extras) | 05 | Cristian |
+| 2026-11-14 | Car show field removed | 05 | Cristian |

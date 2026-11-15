@@ -13,6 +13,8 @@
 - Hub layout: [[Hub Layout Sketch]]
 - City inside the hub: [[City]]
 - Off-road park: [[Off-Road Park]]
+- Dealership + meet lot: [[Dealership and Meet Lot]]
+- Hub fill-in areas: [[Hub Fill]]
 - World-wide settings (day/night, weather, traffic): [[World Settings]]
 
 ## Open questions
