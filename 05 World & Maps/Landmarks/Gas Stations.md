@@ -13,6 +13,19 @@ Like NFS Heat: drive through to **repair your car**.
 - Uses **reset each new night**
 - **Works during cop chases**
 
+## The model (prefab) — used for EVERY gas station
+**Brand:** OVERTAKE FUEL (original, red/white/charcoal with neon red + amber stripes)
+**Where:** `ServerStorage > Prefabs > GasStation`. To add a station: clone it and `PivotTo(CFrame.new(x, groundY, z) * rotation)`. Front (pumps) faces -Z; pivot is at ground level, lot center. Footprint 110 x 92 studs.
+**Inside the prefab:**
+- Canopy with layered neon stripes, red fascia, glowing OVERTAKE FUEL signs on 3 sides, underside lights (night-ready)
+- 3 pump islands, 6 detailed pumps (screens, displays, nozzles, hoses), columns, yellow bollards, trash cans
+- Mini mart: metal siding, red parapet with glow line, MINI MART sign + logo, windows with shelves/products visible inside, coolers, counter, slushie machine, glass doors, awning, ICE freezer, propane cage, bench, planters, roof units, restrooms, dumpster enclosure
+- Price pylon (REG / PLUS / PREM / DSL), air machine, 2 EV chargers, parking stalls + arrows
+- Landscaping beds, bushes, trees, lamps
+- `RepairZone` part (invisible) for the repair + nitrous system
+**Placed at:** hub (by the main avenue) and the city (west side). Old versions backed up in ServerStorage.
+**Hub surroundings:** grassy terrain mounds, boulders, evergreens, flower beds, hedges, benches, WELCOME TO OVERTAKE sign.
+
 ## Open questions
 - [ ] How many gas stations per night map?
 - [ ] Does it also work in day races, or night only?

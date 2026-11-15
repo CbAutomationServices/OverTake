@@ -85,3 +85,4 @@
 | 2026-11-14 | MX grandstand detailed; track dirt recolored with ruts + braking bumps | 05 | Cristian |
 | 2026-11-14 | Dealership (OverTake Motors) + car meet lot detailed; empty hub areas filled (west strip businesses, tuner district, car show field, park extras) | 05 | Cristian |
 | 2026-11-14 | Car show field removed | 05 | Cristian |
+| 2026-11-14 | One gas station prefab (OVERTAKE FUEL) used for all gas stations; placed at hub + city; hub surroundings landscaped | 05, 08 | Cristian |
