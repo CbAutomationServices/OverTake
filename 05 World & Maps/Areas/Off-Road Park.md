@@ -14,8 +14,9 @@ Map extended **west past the old edge** (terrain ground to x -2100) to fit it. ~
 | Straight 3 (z 920) | Step-up plateau, big triple, 3 rollers |
 | Straight 4 (z 1040) | Rhythm of 4 tables, a double, checkered finish line |
 | Back straight (x -1920) | 4 rollers |
-Extras: 260-stud bleachers with red roof, announcer tower, pit area with 4 tents, hay bales around every berm, tire stacks, yellow stakes, infield grass mounds. Old v1 dressing backed up in ServerStorage.
+Extras: detailed **grandstand** (10 rows of aluminum benches, 3 stair aisles with handrails, front wall + banners + fence, end walls, entry stairs, back wall banners, steel trusses, sloped red roof with OVERTAKE MX PARK fascia, light bars for night, flags), announcer tower, pit area with 4 tents, hay bales around every berm, tire stacks, yellow stakes, infield grass mounds. Old v1 dressing backed up in ServerStorage.
 West edge framed by new hills + ~290 evergreens. Hills were smoothed (no more stair-step rings).
+Dirt: richer brown, with darker packed ruts on 3 racing lines, braking bumps before each berm, and ruts through the berms.
 
 ## Trails + forest
 - ~3,800-stud trail loop from the trailhead through rolling hills, past Titan Rock and through a rock arch
