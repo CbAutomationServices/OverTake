@@ -21,5 +21,5 @@ Studio: `OverTake_Hub > Tuner District`
 - Added basketball court, picnic shelter, walking path with lamps
 
 ## Still plain
-- [ ] Shop / Workshop building (still a gray block)
+- [x] Shop / Workshop → [[Workshop]]
 - [ ] Takeover / donut pad (just asphalt)
