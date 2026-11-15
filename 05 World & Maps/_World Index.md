@@ -12,6 +12,7 @@
 
 - Hub layout: [[Hub Layout Sketch]]
 - City inside the hub: [[City]]
+- Off-road park: [[Off-Road Park]]
 - World-wide settings (day/night, weather, traffic): [[World Settings]]
 
 ## Open questions
