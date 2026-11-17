@@ -41,3 +41,21 @@ Studio: `OverTake_Hub > OverTake Speedway`. Center ~ (720, 1650), next to the of
 - [ ] Second entrance from the parking lot side (tunnel under the stands?)
 - [ ] Track for races: which tier classes use it, laps, AI?
 - [ ] What goes in the empty land where the old oval was (east of the hub)?
+
+## Detail pass (2026-11-16): Daytona-style frontstretch
+Built by `ServerStorage.SpeedwayKit`. The old main grandstand is kept in `ServerStorage.OldSpeedwayParts`.
+- **Main grandstand** (x 392..1048), about 800 parts with one invisible collider:
+  - Sponsor podium and glass fence
+  - Lower deck (blue, 20 rows, 5 sections) with stair aisles, handrails and section tunnels
+  - Glass suite level with a warm light strip
+  - Upper deck (red, 15 rows)
+  - Steel back facade with a banner, and 5 gate towers with glass escalators facing the entrance plaza
+  - Cantilever truss roof with lights underneath
+  - Big video board on the roof, Race Control box in the centre
+  - End walls
+- **SAFER barrier** (steel and blue) on the track side of every outer wall.
+- **Sponsor boards** along both straightaway walls (fake brands: NITRO-X, Rain City Tires, Cascade Oil, Heat Energy, Turbo Cola, and others).
+- **Start/finish:** checkered line at x 720 with a flag stand hanging over the track (green flag).
+- **Scoring pylon** in the turn-3 infield: 12 position rows, lap counter, OT crown, beacon.
+- **Track surface** recoloured to dark race asphalt, with a lighter apron and pit lane.
+
