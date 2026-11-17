@@ -27,6 +27,16 @@ Numbers for [[City Blueprint v2]], [[OverTake Metro]] and [[Building Style Guide
 | Train | 3 cars x 50 studs, 10 wide |
 | Train speed (visual) | 60 studs/s, 20 s dwell at stations |
 
+## Freeway
+| Setting | Value |
+|---|---|
+| Total width | 60 studs (2 x 2 lanes of 12, 4 median, 4 shoulders) |
+| Viaduct deck height | up to 34 |
+| Pillar spacing | ~60 studs |
+| Tunnel clearance | 13 studs |
+| Deep tunnel deck | y -16 |
+| Min curve radius | 250 studs |
+
 ## Buildings
 | Setting | Value |
 |---|---|

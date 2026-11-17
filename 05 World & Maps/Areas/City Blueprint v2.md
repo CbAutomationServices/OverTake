@@ -18,6 +18,7 @@ The plan for rebuilding the hub's city: higher-quality buildings, a street layou
 | **Waterfront** *(new)* | -1900..-1500 / -1500..540 | promenade boulevard along the water, piers into the bay | Sky Needle (NW corner, moved here), ferry terminal, aquarium, public market, seafood shacks, Ferris wheel | Seattle waterfront |
 | Downtown West | -1500..-1000 / -1150..-590 | Belltown streets | supertalls, towers | skyline |
 | Downtown Core | -1000..-20 / -1150..-590 | **Pike diagonal** cuts the grid; the grid north of Pike is rotated to match it, so streets T into Pike; flatiron buildings on the triangle lots | glass skyline, clock-spire tower, maze tower | big-city canyon |
+| **Hubside** *(new)* | -20..760 / -1120..-40 | crescent streets curving around **Hubside Hill** (a park hill the freeway tunnels through); streets pass under the elevated freeway; small plaza | mixed: art deco, walk-ups, ribbed towers near downtown | lively, layered, in-between district |
 | Central Park | -1000..-760 / -700..-500 | blocks the east–west streets | park, pond, kiosks | breather |
 | Old Town | -1500..-950 / -590..30 | narrow, curved, one-way, cobblestone | tenements with water towers, classical brick, market | old brick, tight streets |
 | Midtown | -950..-20 / -590..30 | grid that **jogs half a block** every crossing, so no through-runs | art deco offices, brownstones, walk-ups | classy |
@@ -37,6 +38,9 @@ The plan for rebuilding the hub's city: higher-quality buildings, a street layou
 - **East:** the city reaches x 2700 and the mountains move out to about x 2800.
 - **West:** the forest band west of the city becomes a **bay**: water from about x -1900 out to the horizon, coastline curving in south of z 300 so the MX track stays dry. The bay replaces the west mountains, so the far shore can be low hills.
 - **Moves:** the Sky Needle moves from Needle Park to the waterfront's north-west corner, around (-1720, -1080). The old Needle Park block becomes a downtown plaza.
+
+## OverTake Freeway
+See [[OverTake Freeway]]. It runs from the drag strip, through Hubside (elevated, then through the Hubside Hill tunnel), under Main Ave, the takeover and the garage in a deep tunnel, and ends at the Stadium Way roundabout by the speedway.
 
 ## Street network rules
 Numbers are in [[City Settings]].
