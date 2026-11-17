@@ -66,6 +66,15 @@ Numbers are in [[City Settings]].
 - [ ] **A. Style:** v2 building prefabs that match [[Building Style Guide]]. Prototypes first, for approval.
 - [x] **Hubside built (2026-11-16):** 8 streets (crescent around Hubside Hill, loop road under the freeway viaduct, Hubside Ave with a bridge over the freeway cut), sidewalks, lamps, 75 v2 buildings, hill park. Builder: `ServerStorage.CityKit` (reusable for every district).
 - [x] **Sky Needle moved** to the waterfront's north-west corner with a round plaza (`OverTake_Hub.Waterfront["Needle Plaza"]`).
+- [x] **East city + suburbs built (2026-11-16):** 87 new streets and 1,034 buildings in `OverTake_Hub["East City"]`.
+  - **East Side:** Garage Circle roundabout with 6 roads off it.
+  - **Arts:** grid tilted 15°, lofts.
+  - **Eastlake:** second skyline (stepped glass towers, 2 clock-spire towers).
+  - **Eastlake Village:** ring road around the new Eastlake Lake.
+  - **Northgate:** warehouses.
+  - **Stadium District:** hotels.
+  - **Suburbs** (Capitol Hill, Stadium Heights, Southpoint): winding streets, offset side streets, 532 farmhouses + 162 townhouse rows with lawns, driveways, mailboxes and yard trees.
+  - **Performance:** about 247k parts (workspace about 370k). StreamingEnabled is on. Test on a phone before adding much more.
 - [ ] **B. Layout:** rebuild the existing city's streets per this plan (Pike diagonal, jogs, Old Town curves, Central Park).
 - [ ] **C. Expansion:** push the east mountains out; build the Arts, East Side, Capitol Hill and Stadium districts.
 - [ ] **D. Metro:** Line 1 viaduct + stations + train visuals ([[OverTake Metro]]).

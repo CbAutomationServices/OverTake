@@ -105,3 +105,4 @@
 | 2026-11-16 | Hubside district added north of hub/takeover/garage; OverTake Freeway planned: drag strip → Hubside viaduct → Hubside Hill tunnel → deep tunnel under Main Ave/takeover/garage → speedway | 05 | Cristian |
 | 2026-11-16 | OverTake Freeway + Hubside Hill built in Studio | 05 | Cristian |
 | 2026-11-16 | Hubside district built; Sky Needle moved to the waterfront | 05 | Cristian |
+| 2026-11-16 | East city + suburbs built (East Side, Arts, Eastlake, Eastlake Village + lake, Northgate, Stadium District, Capitol Hill, Stadium Heights, Southpoint) | 05 | Cristian |
