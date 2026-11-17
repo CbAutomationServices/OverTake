@@ -101,3 +101,4 @@
 | 2026-11-16 | Metro is scenery only (not rideable) | 05 | Cristian |
 | 2026-11-16 | 15 v2 building prefabs built (walk-ups, tenement, classical brick, brownstones, art deco, 5 towers incl. clock spire + maze, hotel, arts loft, farmhouses, townhouses) | 12 | Cristian |
 | 2026-11-16 | City extends further east to x 2700: Eastlake (2nd skyline) + Eastlake Village (lake); Northgate + Stadium Heights stretched; Metro Line 3 (Green) planned | 05 | Cristian |
+| 2026-11-16 | Terrain reshaped for City v2: west bay + waterfront seawall, flat land for every new district, east mountains moved to x 2850; trees re-scattered | 05 | Cristian |
