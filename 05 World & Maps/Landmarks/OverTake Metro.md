@@ -17,6 +17,9 @@ An elevated metro running above the city on a concrete viaduct. **Scenery only:*
 
 Route: Waterfront → along the median of the Pike diagonal → curves east above Main Avenue (median) → Garage Circle → south along the East Side avenue → down Stadium Way → Stadium → east along the speedway parking → Stadium Heights.
 
+## Line 3 — Green (later)
+Garage Circle → Capitol Hill (1500, -300) → Eastlake (2200, -650) → Northgate train yard (2400, -1250).
+
 ## Line 2 — Blue (later)
 Waterfront → Old Town (-1290, -250) → South End (-1050, 300) → Off-Road Park lot (-860, 640).
 

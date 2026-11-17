@@ -24,15 +24,17 @@ The plan for rebuilding the hub's city: higher-quality buildings, a street layou
 | South End | -1500..-600 / 30..545 | curved residential streets + roundabout + cul-de-sacs | twin walk-ups, rowhouses | neighbourhood |
 | Arts & Warehouse *(new)* | 780..1250 / -1120..-350 | grid rotated 15° | lofts, murals, breweries, metro yard | gritty, creative |
 | East Side *(new)* | 780..1250 / -350..560 | **Garage Circle** roundabout with 6 radial streets | mid-rises, shops around the garage | busy hub of the east |
-| Northgate *(new)* | 1210..1950 / -1500..-1120 | industrial loops | warehouses, metro train yard | gritty edge |
+| Northgate *(new)* | 1210..2700 / -1500..-1120 | industrial loops | warehouses, metro train yard | gritty edge |
 | Capitol Hill *(new)* | 1250..1950 / -1120..560 | winding hillside streets that follow the terrain | farmhouses, villas, small apartments | hills, views |
+| **Eastlake** *(new)* | 1950..2700 / -1120..-200 | grid broken by a lake boulevard; plazas | second skyline: ribbed + stepped glass towers, clock spire | modern business district |
+| **Eastlake Village** *(new)* | 1950..2700 / -200..560 | streets curving around Eastlake Lake | shops, mid-rises, lakeside park + boardwalk | relaxed, lakeside |
 | Stadium District *(new)* | 780..1460 / 560..1075 | Stadium Way boulevard + roundabout | hotels, sports bars, merch stores | game-day energy |
 | Stadium West *(new)* | -40..780 / 800..1075 | plaza + parking | plaza, food stalls | gateway to the speedway |
-| **Stadium Heights** *(new)* | 1460..1950 / 560..2250 | curvy residential streets, cul-de-sacs | houses, townhomes, apartments | neighbourhood next to the speedway |
+| **Stadium Heights** *(new)* | 1460..2700 / 560..2250 | curvy residential streets, cul-de-sacs | houses, townhomes, apartments | neighbourhood next to the speedway |
 | **Southpoint** *(new)* | -40..1460 / 2075..2300 | residential loop behind the speedway | houses, farmhouses | quiet streets at the foot of the pass |
 
 ## Terrain changes this needs
-- **East:** mountains pushed out to about x 2000.
+- **East:** the city reaches x 2700 and the mountains move out to about x 2800.
 - **West:** the forest band west of the city becomes a **bay**: water from about x -1900 out to the horizon, coastline curving in south of z 300 so the MX track stays dry. The bay replaces the west mountains, so the far shore can be low hills.
 - **Moves:** the Sky Needle moves from Needle Park to the waterfront's north-west corner, around (-1720, -1080). The old Needle Park block becomes a downtown plaza.
 

@@ -25,23 +25,26 @@ How the v2 building prefabs should look. Built from parts, realistic and readabl
 8. **Performance:** decorative parts don't collide. Each building gets one invisible collider. Stay within the part budgets in [[City Settings]].
 9. **Recolourable:** main wall parts are named `Wall`, so copies of one model can vary colour.
 
-## v2 catalogue (planned)
+## v2 catalogue
+Stored in `ServerStorage.Prefabs.BuildingsV2`, built by `ServerStorage.BuildingKitV2`. ✅ = built (2026-11-16).
 | Model | Ref | Lot |
 |---|---|---|
-| Walkup_Twin | 4 | S |
-| Tenement_WaterTower | 6 | S |
-| Classical_Brick | 3 | L |
-| ArtDeco_Office | 2 | S/L |
-| Brownstone_Row | 3 | S |
-| Flatiron (triangle lot) | — | special |
-| Tower_ClockSpire | 5 | XL |
-| Tower_Maze | 5 | S |
-| Tower_SteppedGlass | 5 | XL |
-| Tower_Ribbed A / B | 7 | S / L |
-| Loft_Arts (mural wall) | — | L |
-| Hotel_Stadium | — | L |
-| Farmhouse_Grand / Farmhouse_Small | 1 | Capitol Hill lots |
-| Metro_Station | — | special |
+| ✅ Walkup_Twin | 4 | S |
+| ✅ Tenement_WaterTower | 6 | S |
+| ✅ Classical_Brick | 3 | L |
+| ✅ ArtDeco_Office | 2 | S/L |
+| ✅ Brownstone_Row | 3 | S |
+| ✅ Tower_ClockSpire | 5 | XL |
+| ✅ Tower_Maze | 5 | S |
+| ✅ Tower_SteppedGlass | 5 | XL |
+| ✅ Tower_Ribbed A / B | 7 | S / L |
+| ✅ Loft_Arts (mural wall) | — | L |
+| ✅ Hotel_Stadium | — | L |
+| ✅ Farmhouse_Grand / Farmhouse_Small | 1 | Capitol Hill lots |
+| ✅ Townhouse_Row | — | Stadium Heights (44x30) |
+| Flatiron (triangle lot) — todo | — | special |
+| Metro_Station — todo | — | special |
+| Waterfront set (pier, ferry terminal, aquarium, market, Ferris wheel) — todo | — | special |
 
 The v1 models in [[Building Prefabs]] stay until v2 replaces them.
 
