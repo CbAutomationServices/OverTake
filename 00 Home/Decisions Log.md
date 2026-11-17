@@ -104,3 +104,4 @@
 | 2026-11-16 | Terrain reshaped for City v2: west bay + waterfront seawall, flat land for every new district, east mountains moved to x 2850; trees re-scattered | 05 | Cristian |
 | 2026-11-16 | Hubside district added north of hub/takeover/garage; OverTake Freeway planned: drag strip → Hubside viaduct → Hubside Hill tunnel → deep tunnel under Main Ave/takeover/garage → speedway | 05 | Cristian |
 | 2026-11-16 | OverTake Freeway + Hubside Hill built in Studio | 05 | Cristian |
+| 2026-11-16 | Hubside district built; Sky Needle moved to the waterfront | 05 | Cristian |

@@ -64,6 +64,8 @@ Numbers are in [[City Settings]].
 
 ## Phases
 - [ ] **A. Style:** v2 building prefabs that match [[Building Style Guide]]. Prototypes first, for approval.
+- [x] **Hubside built (2026-11-16):** 8 streets (crescent around Hubside Hill, loop road under the freeway viaduct, Hubside Ave with a bridge over the freeway cut), sidewalks, lamps, 75 v2 buildings, hill park. Builder: `ServerStorage.CityKit` (reusable for every district).
+- [x] **Sky Needle moved** to the waterfront's north-west corner with a round plaza (`OverTake_Hub.Waterfront["Needle Plaza"]`).
 - [ ] **B. Layout:** rebuild the existing city's streets per this plan (Pike diagonal, jogs, Old Town curves, Central Park).
 - [ ] **C. Expansion:** push the east mountains out; build the Arts, East Side, Capitol Hill and Stadium districts.
 - [ ] **D. Metro:** Line 1 viaduct + stations + train visuals ([[OverTake Metro]]).
