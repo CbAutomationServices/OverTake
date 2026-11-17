@@ -89,3 +89,9 @@
 | 2026-11-14 | Workshop built as a reusable prefab (OVERTAKE PERFORMANCE): 4 bays, dyno, lifts, alignment, paint booth, office; placed in the hub | 05, 10 | Cristian |
 | 2026-11-14 | Oval rebuilt as OverTake Speedway (NFS Heat stadium inspired) next to the off-road park, with infield stunt park; old oval removed | 05, 06 | Cristian |
 | 2026-11-14 | Dome hills + gas-station mounds replaced with realistic noise terrain across the whole map, mountains around the edges; flat ground parts replaced with terrain | 05 | Cristian |
+| 2026-11-16 | Tuner District shops removed (road kept) | 05 | Cristian |
+| 2026-11-16 | Terrain height fixed (it was poking up through roads and lots) | 05 | Cristian |
+| 2026-11-16 | OverTake Pass: paved touge mountain road with hairpins, guardrails, lamps, summit lookout + radio tower | 05, 06 | Cristian |
+| 2026-11-16 | Off-road park: bigger hills, creek + ford, pond | 05 | Cristian |
+| 2026-11-16 | Trees/rocks/bushes switched to realistic Creator Store meshes (no scripts) | 05, 12 | Cristian |
+| 2026-11-16 | Buildings are reusable prefab models (14 designs + 5 wrapped specials); city rebuilt with them | 05, 12 | Cristian |

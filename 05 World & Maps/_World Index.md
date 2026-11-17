@@ -14,6 +14,8 @@
 - City inside the hub: [[City]]
 - Off-road park: [[Off-Road Park]]
 - Whole-map terrain + mountains: [[Hub Terrain]]
+- Mountain pass road: [[OverTake Pass]]
+- Reusable building + nature models: [[Building Prefabs]] · [[Nature Prefabs]]
 - Dealership + meet lot: [[Dealership and Meet Lot]]
 - Hub fill-in areas: [[Hub Fill]]
 - Speedway + stunt park: [[OverTake Speedway]]
