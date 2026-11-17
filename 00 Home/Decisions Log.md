@@ -96,3 +96,6 @@
 | 2026-11-16 | Trees/rocks/bushes switched to realistic Creator Store meshes (no scripts) | 05, 12 | Cristian |
 | 2026-11-16 | Buildings are reusable prefab models (14 designs + 5 wrapped specials); city rebuilt with them | 05, 12 | Cristian |
 | 2026-11-16 | City Blueprint v2 drafted: non-grid layout, 5 new districts around the garage + speedway, elevated metro (2 lines), v2 building style guide | 05, 09, 12 | Cristian |
+| 2026-11-16 | City v2 bigger: Waterfront, Northgate, Stadium Heights, Southpoint added; districts stretched into the open land; east mountains to ~x 2000 | 05 | Cristian |
+| 2026-11-16 | West bay + waterfront added; Sky Needle moves to the waterfront NW corner | 05 | Cristian |
+| 2026-11-16 | Metro is scenery only (not rideable) | 05 | Cristian |

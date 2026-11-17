@@ -15,7 +15,8 @@ The plan for rebuilding the hub's city: higher-quality buildings, a street layou
 ## Districts
 | District | Rough area (x / z) | Street pattern | Buildings | Feel |
 |---|---|---|---|---|
-| Downtown West | -1500..-1000 / -1150..-590 | Needle Park loop | supertalls, Sky Needle | landmark skyline |
+| **Waterfront** *(new)* | -1900..-1500 / -1500..540 | promenade boulevard along the water, piers into the bay | Sky Needle (NW corner, moved here), ferry terminal, aquarium, public market, seafood shacks, Ferris wheel | Seattle waterfront |
+| Downtown West | -1500..-1000 / -1150..-590 | Belltown streets | supertalls, towers | skyline |
 | Downtown Core | -1000..-20 / -1150..-590 | **Pike diagonal** cuts the grid; the grid north of Pike is rotated to match it, so streets T into Pike; flatiron buildings on the triangle lots | glass skyline, clock-spire tower, maze tower | big-city canyon |
 | Central Park | -1000..-760 / -700..-500 | blocks the east–west streets | park, pond, kiosks | breather |
 | Old Town | -1500..-950 / -590..30 | narrow, curved, one-way, cobblestone | tenements with water towers, classical brick, market | old brick, tight streets |
@@ -23,11 +24,17 @@ The plan for rebuilding the hub's city: higher-quality buildings, a street layou
 | South End | -1500..-600 / 30..545 | curved residential streets + roundabout + cul-de-sacs | twin walk-ups, rowhouses | neighbourhood |
 | Arts & Warehouse *(new)* | 780..1250 / -1120..-350 | grid rotated 15° | lofts, murals, breweries, metro yard | gritty, creative |
 | East Side *(new)* | 780..1250 / -350..560 | **Garage Circle** roundabout with 6 radial streets | mid-rises, shops around the garage | busy hub of the east |
-| Capitol Hill *(new)* | 1250..1850 / -1120..560 | winding hillside streets that follow the terrain | farmhouses, villas, small apartments | hills, views |
+| Northgate *(new)* | 1210..1950 / -1500..-1120 | industrial loops | warehouses, metro train yard | gritty edge |
+| Capitol Hill *(new)* | 1250..1950 / -1120..560 | winding hillside streets that follow the terrain | farmhouses, villas, small apartments | hills, views |
 | Stadium District *(new)* | 780..1460 / 560..1075 | Stadium Way boulevard + roundabout | hotels, sports bars, merch stores | game-day energy |
 | Stadium West *(new)* | -40..780 / 800..1075 | plaza + parking | plaza, food stalls | gateway to the speedway |
+| **Stadium Heights** *(new)* | 1460..1950 / 560..2250 | curvy residential streets, cul-de-sacs | houses, townhomes, apartments | neighbourhood next to the speedway |
+| **Southpoint** *(new)* | -40..1460 / 2075..2300 | residential loop behind the speedway | houses, farmhouses | quiet streets at the foot of the pass |
 
-The east-side districts need the east mountains pushed out to about x 1900. That's one setting change in the terrain generator.
+## Terrain changes this needs
+- **East:** mountains pushed out to about x 2000.
+- **West:** the forest band west of the city becomes a **bay**: water from about x -1900 out to the horizon, coastline curving in south of z 300 so the MX track stays dry. The bay replaces the west mountains, so the far shore can be low hills.
+- **Moves:** the Sky Needle moves from Needle Park to the waterfront's north-west corner, around (-1720, -1080). The old Needle Park block becomes a downtown plaza.
 
 ## Street network rules
 Numbers are in [[City Settings]].
@@ -58,8 +65,6 @@ Numbers are in [[City Settings]].
 - [ ] **F. Later:** pedestrians, traffic, Metro Line 2.
 
 ## Open questions
-- Should the hub centre (dealer, shop, meet lot) stay traffic-free with the metro flying over it, or should the metro go around it?
-- Canal or river through the East Side with bridges? (Not on the map yet.)
-- Does the metro get used in gameplay (fast travel / ride it) or is it just scenery?
+- Decided 2026-11-16: the metro is **scenery only** (not rideable). Water = the west **bay/waterfront**, not an East Side canal.
 
 Related: [[City]] · [[Hub]] · [[OverTake Metro]] · [[Building Style Guide]] · [[Building Prefabs]] · [[City Settings]]
