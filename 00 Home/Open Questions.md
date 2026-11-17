@@ -34,3 +34,7 @@ Master list. Answered questions move to the section note + [[Decisions Log]].
 - [ ] AI cops, player cops, or both?
 ## 10 UI
 - [ ] Garage / dealership / HUD layout
+## 05 City v2
+- [ ] Metro over the hub centre or around it?
+- [ ] Canal/river through the East Side?
+- [ ] Metro: rideable/fast travel, or scenery only?

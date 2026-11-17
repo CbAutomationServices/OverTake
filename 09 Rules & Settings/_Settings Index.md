@@ -15,3 +15,4 @@ When we build in Roblox, each note becomes its own config module, so changing a 
 | [[World Settings]] | Day/night length, weather, traffic density. |
 | [[Server Settings]] | Max players per server, spawn rules, data saving. |
 | [[Game Rules]] | Player rules: collisions, ghosting, AFK, griefing, chat. |
+- [[City Settings]]: streets, metro, building numbers
