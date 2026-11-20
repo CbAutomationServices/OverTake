@@ -133,4 +133,7 @@
 | 2026-11-20 | Until the race maps get generated, day races teleport to **small placeholder maps** (a track + a building or two) | 05, 06 | Cristian |
 | 2026-11-20 | Day look = **golden afternoon** (warm low sun, long shadows, light haze); lighting pass applied in Studio, original settings backed up in ServerStorage.LightingBackup_Original | 05, 09 | Cristian |
 | 2026-11-20 | Map polish order: lighting → Garage interior → fill the hub → skyline variety → part-count cleanup (381k parts now; too many for phones) | 05, 12 | Cristian |
-
+| 2026-11-20 | **Map redesign (v3):** new layout, ~12,000 × 12,000 studs (~3× bigger), everything rebuilt with new mesh models; Speedway, Drag Strip, touge pass and off-road park come back as venues in the new layout | 05 | Cristian |
+| 2026-11-20 | v3 regions: ring highway + long freeways, mountains + touge passes, coast + harbor/port, farmland + small towns (reference: Forza Horizon-style open highway map) | 05 | Cristian |
+| 2026-11-20 | City vibe for v3: **generic big US city** (replaces the Seattle/PNW style) | 05, 12 | Cristian |
+| 2026-11-20 | Buildings are made in Blender with real PBR textures (Poly Haven, CC0) → imported as meshes. **At least 20 building types**: repeatable fillers + key buildings | 12 | Cristian |
