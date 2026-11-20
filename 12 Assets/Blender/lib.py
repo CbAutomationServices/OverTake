@@ -117,3 +117,25 @@ def prism(loc,w,h,dep,m,rot_z=0.0,uv=1.5):
 def halfcyl(loc,r,dep,m,verts=16,axis="y"):
     bpy.ops.mesh.primitive_cylinder_add(vertices=verts,radius=r,depth=dep,location=loc,rotation=(math.radians(90),0,0) if axis=="y" else (0,math.radians(90),0))
     o=bpy.context.object; o.data.materials.append(m); uvbox(o,1.0); return o
+def sphere(loc,r,m,sub=2):
+    bpy.ops.mesh.primitive_ico_sphere_add(subdivisions=sub,radius=r,location=loc); o=bpy.context.object; o.data.materials.append(m); uvbox(o,1.0); return o
+_cache={}
+def M(key,fn):
+    if key not in _cache: _cache[key]=fn()
+    return _cache[key]
+def lightpole(x,y,h=9.0,arm=1.8,dirx=1):
+    P=M("pole",lambda: flat("PoleDark","2a2c30",0.45,0.6)); L=M("led",lambda: flat("LEDPanel","fff4e0",0.3,emit=6.0))
+    cyl((x,y,h/2),0.14,h,P,10); box((x+dirx*arm/2,y,h),(arm,0.35,0.18),P); box((x+dirx*arm*0.7,y,h-0.11),(arm*0.5,0.28,0.04),L)
+    cyl((x,y,0.25),0.35,0.5,P,12)
+def planter(x,y,w,d,stone=None,shrubs=3):
+    S=stone or M("plst",lambda: pbr("PlanterStone","conc",(0.8,0.8,0.78)))
+    G=M("soil",lambda: flat("Mulch","3a2a1e",0.95)); B=M("shrub",lambda: flat("Shrub","3e6b2f",0.9)); B2=M("shrub2",lambda: flat("ShrubLight","5a8a3a",0.9))
+    box((x,y,0.35),(w,d,0.7),S,bev=0.04); box((x,y,0.68),(w-0.3,d-0.3,0.06),G)
+    for i in range(shrubs):
+        t=(i+0.5)/shrubs; sx=x-w/2+w*t if w>=d else x; sy=y if w>=d else y-d/2+d*t
+        sphere((sx,sy,0.95),min(w,d)*0.32,B if i%2==0 else B2,2)
+def bollard(x,y,col=None,h=1.0):
+    C=col or M("yel",lambda: flat("Yellow","e8b81e",0.5)); cyl((x,y,h/2),0.14,h,C,12)
+def stripes(x0,y,n,step=3.0,length=5.0,ang=0.0):
+    W_=M("paint",lambda: flat("PaintWhite","f0f0ee",0.6))
+    for i in range(n): box((x0+i*step,y,0.17),(0.15,length,0.02),W_,rot=(0,0,ang))
