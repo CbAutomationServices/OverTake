@@ -10,7 +10,7 @@ Made in Blender with real CC0 PBR textures (Poly Haven) → imported as meshes. 
 ## Fillers (used many times)
 | # | Building | Variants | Where |
 |---|---|---|---|
-| 1 | Brick tenement, 5–7 floors | ✅ v1 (OT_Tenement_A) · colors, water tower on/off | Inner neighborhoods |
+| 1 | Brick tenement, 5–7 floors | ✅ v1 imported: asset **139420612631871** (OT_Tenement_A), ~11k tris, 14 meshes · colors, water tower on/off | Inner neighborhoods |
 | 2 | Brick walk-up, 3–4 floors | ⏳ | Neighborhoods |
 | 3 | Brownstone rowhouses | ⬜ | Neighborhoods |
 | 4 | Storefront row, 2 floors (shops below) | ⬜ swap shop signs | Main streets, towns |
@@ -55,3 +55,10 @@ Made in Blender with real CC0 PBR textures (Poly Haven) → imported as meshes. 
 - Each building ≤ ~12k triangles total, ≤ 10k per mesh; shared texture sets.
 - Render a preview of each → Cristian approves → import.
 - Build scripts live in `12 Assets/Blender/` so any building can be tweaked and rebuilt.
+
+## Import notes (learned on the test import, 2026-11-20)
+- GLB arrives 1 m = 1 stud → scale ×3.57 after insert
+- Textured materials keep their maps; plain-color materials arrive grey → set colors after insert (or bake every material to a small texture)
+- Blender color tints are lost → bake the tint into the texture before export
+- Parts arrive unanchored → anchor all
+- Upload folder approved in Studio: `12 Assets/Blender`
