@@ -5,7 +5,7 @@ Like NFS Heat: drive through to **repair your car**.
 
 ## Confirmed
 - **Hub:** at least one, mostly for looks/vibe (the hub has no damage)
-- **Night maps:** **full repair** + **refills nitrous**
+- **At night (overworld):** **full repair** + **refills nitrous**
 - **Limited uses per night:**
   - **C / B / A tier** → **1 repair**
   - **S / SS / Z tier** (PR 281+) → **2 repairs**
@@ -27,7 +27,7 @@ Like NFS Heat: drive through to **repair your car**.
 **Hub surroundings:** grassy terrain mounds, boulders, evergreens, flower beds, hedges, benches, WELCOME TO OVERTAKE sign.
 
 ## Open questions
-- [ ] How many gas stations per night map?
+- [ ] How many gas stations on the overworld for night?
 - [ ] Does it also work in day races, or night only?
 
 Numbers → [[Heat Settings]]

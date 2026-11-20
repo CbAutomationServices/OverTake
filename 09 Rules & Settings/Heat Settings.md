@@ -24,7 +24,7 @@ Cop cars are picked from a "cop roster" per tier, so a Z-tier player gets Z-tier
 | Heat gain | +1 per night race finished; +1 per escaped chase | Proposed |
 | Heat drops | Only by banking at a safehouse (resets to 1) | Proposed |
 | Bust meter | Nearly stopped (< 10 studs/s) with a cop within 25 studs → fills in 4 s (3 s at Heat 5+) | Proposed |
-| Bust penalty | Lose **all unbanked Rep** + fine = **all unbanked night cash + 10% of the cash you brought in** (max $50,000) | ⭐ Proposed: confirm |
+| Bust penalty | Lose **all unbanked Rep** + fine = **all unbanked night cash + 10% of the cash you brought in** (max $50,000) | Confirmed 2026-11-19 |
 | Gas station repairs per night | C/B/A = 1, S/SS/Z = 2 | Confirmed |
 | Extra repair booster | +1 (Premium) | Confirmed |
 | Repair uses reset | Each new night | Confirmed |

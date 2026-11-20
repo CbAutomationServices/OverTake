@@ -8,5 +8,5 @@
 - [ ] Which real neighborhoods/roads to recreate?
 - [ ] Size
 - [ ] Traffic?
-- [ ] Night server for this map?
+- [x] No night here: this is a **day race map**. Races teleport here when the queue fills (2026-11-19)
 - [ ] Which race types happen here?

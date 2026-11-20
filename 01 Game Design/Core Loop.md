@@ -5,12 +5,13 @@
 
 ```mermaid
 flowchart LR
-  HUB[Hub - always day] --> DAY[Day races]
-  DAY -->|Cash only| CASH[(Cash)]
+  GAR[Start in the Garage: pick car + upgrades] -->|Exit: Day| DAY[Day races]
+  DAY -->|queue fills -> teleport to race map| RM[Race map]
+  RM -->|Cash only| CASH[(Cash)]
   CASH --> PARTS[Buy parts / cars]
   PARTS --> PR[PR goes up -> higher tier]
-  PR --> DAY
-  HUB -->|Garage: choose Night| NIGHT[Night server]
+  PR --> GAR
+  GAR -->|Exit: Night| NIGHT[Night overworld + AI cops]
   NIGHT --> NR[Night races]
   NR -->|little Cash + Rep + Heat| UNB[Unbanked Rep & Cash]
   UNB -->|reach Safehouse| BANK[(Banked Rep)]
@@ -25,7 +26,7 @@ flowchart LR
 ## The two halves
 | | Day | Night |
 |---|---|---|
-| Where | Hub + day maps | Separate night server on a real-place map |
+| Where | Race markers on the overworld → race runs on its own map once the queue fills | **The same overworld map**, at night, with AI cops roaming |
 | Pays | **Cash only** | A little cash + **Rep** + Heat |
 | Cops | None | AI cops, scale with Heat + your tier |
 | Risk | None | Busted = lose unbanked Rep + fine |

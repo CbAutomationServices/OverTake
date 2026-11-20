@@ -29,7 +29,7 @@
 | Tier lock | Exact tier only | Confirmed |
 | Target race length | 2–3 min (drag ~30 s) | Proposed: short sessions on mobile |
 | Racers | Up to 8 | Proposed |
-| AI fill-ins | Yes, so a race always starts | Proposed (open question) |
+| AI fill-ins | Yes, so a race always starts | Confirmed 2026-11-19 |
 | First-race bonus (FTUE) | +$1,000 once | Proposed → [[First 10 Minutes]] |
 | Daily race bonus | 2× payout on the day's featured race, once a day | Proposed |
 | Daily streak | Day 1 $1k → Day 7 rare cosmetic | Proposed |

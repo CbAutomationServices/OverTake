@@ -4,7 +4,6 @@ Only questions that are still OPEN live here. Answered → section note + [[Deci
 ⭐ = blocks Phase 2 / MVP. Items marked *(proposed: …)* have a draft answer waiting for a yes/no.
 
 ## 01 Game Design
-- [ ] AI racers in day races, or players only? *(proposed: players + AI fill-ins so a race always starts)*
 - [ ] Target audience age *(assumed 10–16)*
 - [ ] Is "OverTake" the final name?
 
@@ -23,13 +22,17 @@ Only questions that are still OPEN live here. Answered → section note + [[Deci
 - [ ] Tier colors/badges; one leaderboard per tier?
 
 ## 05 World & Maps
-- [ ] ⭐ **MVP night map:** night happens on real-place maps, and none are built yet. Build Tokyo first, or make the current City v2 (Seattle-style) the first night map? → [[MVP Priority Matrix]]
-- [ ] ⭐ Safehouse locations on the night map
+- [x] Night map → the main overworld (2026-11-19)
+- [ ] ⭐ Phone performance budget for the overworld at night (cops + lights + players) → [[MVP Priority Matrix]]
+- [ ] Safehouses: is the Garage the safehouse? Any extra ones? *(proposed: Garage + 1–2 far-side spots)*
+- [ ] Day and Night = separate servers of the same map? *(proposed: yes)*
+- [ ] Which race map do day races teleport to at launch, before Tokyo exists? *(proposed: the hub's own tracks: Speedway, Drag Strip, Pass, city loops, run as race instances)*
 
 ## 06 Races & Events
-- [ ] ⭐ MVP race types *(proposed: Circuit, Sprint, Drag, Drift)* → [[_Race Index]]
+- [x] Launch race types: Circuit, Sprint, Drag (2026-11-19)
 - [ ] Drag: manual shifting? 1v1 only? distance?
 - [ ] Ghosting (no collisions) in races?
+- [x] AI fill-ins: yes (2026-11-19)
 
 ## 07 Economy
 - [ ] Premium currency name
@@ -38,9 +41,8 @@ Only questions that are still OPEN live here. Answered → section note + [[Deci
 - [ ] Does each Rep level unlock a part level for all slots at once? *(proposed: yes)* → [[Unlocks]]
 
 ## 08 Police & Heat
-- [ ] ⭐ Bust fine amount *(proposed in [[Heat Settings]])*
 - [ ] What each Heat level adds *(proposed in [[Heat Settings]])*
-- [ ] Max players per night server
+- [ ] Max players per night server *(proposed: ~16, smaller than day's ~20, because of cops)*
 
 ## 10 UI
 - [ ] Layout sign-off for Garage, Upgrade Shop, HUD *(proposals in each note)*

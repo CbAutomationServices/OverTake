@@ -118,3 +118,11 @@
 | 2026-11-19 | Build our **own custom chassis** (not A-Chassis) | 11 | Cristian |
 | 2026-11-19 | Launch goal = **10–15 cars** (replaces 30+) | 02 | Cristian |
 | 2026-11-19 | Partner's main job = **3D car models** | 00, 02, 12 | Cristian |
+| 2026-11-19 | **Night happens on the main overworld map** (the hub map we're building), not on the real-place maps (replaces 11-12 "night on real-place maps / hub stays a safe day hangout") | 05, 08 | Cristian |
+| 2026-11-19 | Game starts **in the Garage** (like NFS Heat): pick your car + upgrades, then on leaving you're prompted **Day or Night** | 01, 10 | Cristian |
+| 2026-11-19 | **Day:** race markers around the overworld; once enough players queue, the race **teleports you to its map** (real-place maps become day race maps) | 05, 06 | Cristian |
+| 2026-11-19 | **Night:** AI cops roam the overworld; night races are around the overworld only | 06, 08 | Cristian |
+| 2026-11-19 | The overworld must be **big enough but still run smoothly on phones** | 05, 09 | Cristian |
+| 2026-11-19 | Bust fine = all unbanked night cash + 10% of the cash you brought in (max $50,000) | 08 | Cristian |
+| 2026-11-19 | Launch race types: **Circuit, Sprint, Drag** (Drift moved to post-launch) | 06 | Cristian |
+| 2026-11-19 | **AI racers fill empty spots** so a race always starts | 06 | Cristian |

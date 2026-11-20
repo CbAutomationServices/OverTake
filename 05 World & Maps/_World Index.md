@@ -24,4 +24,4 @@
 
 ## Open questions
 - [x] Hub first, then probably Tokyo
-- [x] Night happens on the real-place maps only
+- [x] ~~Night happens on the real-place maps only~~ → **Night is on the main overworld map** (2026-11-19). Real-place maps are **day race maps**

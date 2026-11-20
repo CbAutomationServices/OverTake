@@ -8,11 +8,19 @@ How the code is organized in Studio. Each vault section maps to its own module (
 ## Places (one universe)
 | Place | What runs there |
 |---|---|
-| **Hub** (current place) | Always day: free roam, Garage, Dealership, day races, FTUE |
-| **Night: City v2** (MVP, proposed) | Night lighting, AI cops, Heat, safehouses, night races |
-| Night: Tokyo / LA / Miami (later) | Same night code, different map |
+| **Overworld** (current place) | Starts in the Garage. Each server runs in **Day mode** (race markers, no cops) or **Night mode** (night lighting, AI cops, Heat, night races) |
+| **Race instances** | Day races teleport here when the queue fills. At launch: copies of the hub tracks (Speedway, Drag Strip, Pass). Later: Tokyo, LA, Miami |
 
-You go to night through the **Garage → TeleportService**. Player data saves before the teleport, and ProfileStore's session lock stops it loading on two servers at once.
+Exit Garage → Day/Night prompt → if this server is the wrong mode, **TeleportService** moves you to a server of the right mode (a reserved/matched server with `mode` in its teleport data). Player data saves before every teleport, and ProfileStore's session lock stops it loading on two servers at once.
+
+## Phone performance budget (night overworld)
+| Item | Budget | How |
+|---|---|---|
+| Players per night server | ~16 | Server Settings |
+| Active cops per server | ~30 total, ~10 per player | CopService cap; far cops despawn |
+| Streaming | StreamingEnabled ON, cops + traffic outside the radius frozen | Streaming radius tuned on a low-end phone |
+| Night lights | Fake lights (Neon + SurfaceLights only near the player) | Pooled light objects |
+| Target | 30+ FPS on a mid phone | rbx-perf-profiling + device simulator |
 
 ## Folder layout
 ```
@@ -34,7 +42,7 @@ ServerScriptService
    ├─ RaceService         lobby, countdown, checkpoints, results, payouts (Drag, Circuit, Sprint, Drift)
    ├─ DailyService        streak + featured race
    ├─ MonetizationService gamepasses, dev products, ProcessReceipt
-   └─ Night only: HeatService, CopService, SafehouseService, GasStationService
+   └─ Night mode only: HeatService, CopService, SafehouseService, GasStationService
 ServerStorage
 └─ World-gen modules (CityGen, CityKit, … already there: don't touch)
 StarterPlayerScripts
@@ -69,4 +77,4 @@ Cash, Premium, Rep, RepLevel,
 Cars = { [carId] = { parts = {Engine=2, Turbo={type="Turbo",lvl=1}, ...}, owned = {...}, cosmetics = {...} } },
 SelectedCar, Daily = {streak, lastClaim}, FTUE = {step}, Stats = {races, wins, busts, escapes, driftBest}
 ```
-Unbanked night Rep/cash live **in the night server's memory only** until you bank at a safehouse.
+Unbanked night Rep/cash live **in the night server's memory only** until you bank at a safehouse (proposed: the Garage).

@@ -5,7 +5,7 @@ Build order and scores → [[MVP Priority Matrix]].
 ## 🧠 Planning (Phase 2: now)
 - [x] Phase 1 research → [[Phase 1 Research Dossier]]
 - [x] Phase 2 drafts: [[Core Loop]], [[Progression Curve]], [[First 10 Minutes]], [[MVP Priority Matrix]], [[Architecture]], [[Car Model Spec]]
-- [ ] **Cristian:** answer the ⭐ items in [[Open Questions]] (night map, starters, bust fine, race types)
+- [ ] **Cristian:** answer the ⭐ items in [[Open Questions]] (starter cars, stats shown, PR formula, phone budget)
 - [ ] **Cristian:** review the proposed numbers → mark notes 🟢 Locked
 
 ## 🧪 Tech tests (allowed during planning)
@@ -20,7 +20,7 @@ Build order and scores → [[MVP Priority Matrix]].
 1. [ ] Chassis + data saving + ConfigService
 2. [ ] PR + parts + Garage UI + Dealership + Economy
 3. [ ] Day races (Drag first) + HUD + FTUE
-4. [ ] Night place + cops + Heat + safehouse + gas stations
+4. [ ] Night mode on the overworld + cops + Heat + safehouse + gas stations
 5. [ ] Monetization + dailies + codes + cosmetics + analytics
 6. [ ] Phone / 4G playtest → soft launch
 

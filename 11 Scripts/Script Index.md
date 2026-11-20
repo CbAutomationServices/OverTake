@@ -15,6 +15,6 @@ Nothing built yet. Full layout and reasons → [[Architecture]].
 | — | VehicleService + VehicleGuard | ServerScriptService/Services |
 | — | ChassisController + CameraController | StarterPlayerScripts/Controllers |
 | 06 Races | RaceService | ServerScriptService/Services |
-| 08 Heat | HeatService + CopService + SafehouseService + GasStationService | Night place only |
-| 05/09 Server | Garage → TeleportService to the night place | GarageService |
+| 08 Heat | HeatService + CopService + SafehouseService + GasStationService | Overworld, Night-mode servers only |
+| 05/09 Server | Garage exit → Day/Night server match (TeleportService); race queue → race instance | GarageService + RaceService |
 | 01 FTUE | FTUEController | StarterPlayerScripts/Controllers |
