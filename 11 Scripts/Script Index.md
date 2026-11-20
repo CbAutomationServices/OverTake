@@ -1,15 +1,20 @@
 # Script Index
 
-Planning only, nothing built yet. Each vault section maps to its own script/module so they stay separate.
+Nothing built yet. Full layout and reasons → [[Architecture]].
 
-| Vault section | Future Roblox module | Type |
+| Vault section | Roblox module | Where |
 |---|---|---|
-| 09 Car Stats | CarData | ModuleScript (data only) |
-| 09 Part Values | PartData | ModuleScript (data only) |
-| 09 PR/Tier Settings | PerformanceConfig | ModuleScript (data only) |
-| 04 Performance | PerformanceCalculator | ModuleScript (logic) |
-| 06 Races | RaceManager | Server Script |
-| 07 Economy | EconomyService | Server Script |
-| — | PlayerData (saving) | Server Script |
-| 08 Heat | CopAI + HeatManager | Server Script (night servers only) |
-| 05/09 Server | DayNightTeleport | Server Script (TeleportService) |
+| 09 Car Stats | CarData | ReplicatedStorage/Shared |
+| 09 Part Values | PartData | ReplicatedStorage/Shared |
+| 09 PR/Tier Settings | Config + PR | ReplicatedStorage/Shared |
+| 04 Performance | PR (formula) | ReplicatedStorage/Shared |
+| — | PlayerDataService (ProfileStore) | ServerScriptService/Services |
+| 07 Economy | EconomyService | ServerScriptService/Services |
+| 03 Parts / 10 Garage | GarageService + GarageUI | Services + Controllers |
+| 02 Cars / 10 Dealership | DealershipService + DealershipUI | Services + Controllers |
+| — | VehicleService + VehicleGuard | ServerScriptService/Services |
+| — | ChassisController + CameraController | StarterPlayerScripts/Controllers |
+| 06 Races | RaceService | ServerScriptService/Services |
+| 08 Heat | HeatService + CopService + SafehouseService + GasStationService | Night place only |
+| 05/09 Server | Garage → TeleportService to the night place | GarageService |
+| 01 FTUE | FTUEController | StarterPlayerScripts/Controllers |

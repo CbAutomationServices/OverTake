@@ -7,4 +7,4 @@
 - **Cars cost money only.** No Rep needed.
 
 ## Open questions
-- [ ] Does each Rep level unlock one part level for all slots at once, or slots at different levels?
+- [ ] Does each Rep level unlock one part level for all slots at once? *(proposed: yes. Sport at Rep 5, Race 12, Pro 22, Elite 35 → [[Economy Settings]])*

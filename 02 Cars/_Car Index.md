@@ -16,6 +16,8 @@ Car stats/prices are NOT stored here: each car's numbers live in [[Car Stats]] (
 - Off-road / trucks
 - Classics *(later update)*
 
-**Launch goal:** 30+ cars
+**Launch goal:** 10–15 cars (changed 2026-11-19, was 30+). Proposed split by tier → [[Car Stats]]
+
+How models are built: [[Car Model Spec]]
 
 How stats work: [[Car Stats Explained]]

@@ -1,19 +1,30 @@
 # Task Board
 
-## 🧠 Planning (current phase)
-- [ ] Answer Open Questions: 01 Game Design
-- [ ] Answer Open Questions: 02 Cars
-- [ ] Answer Open Questions: 03 Upgrades & Parts
-- [ ] Answer Open Questions: 04 Performance & Tiers
-- [ ] Answer Open Questions: 05 World & Maps
-- [ ] Answer Open Questions: 06–08 Races, Economy, Police
-- [ ] Answer Open Questions: 10 UI
+Build order and scores → [[MVP Priority Matrix]].
+
+## 🧠 Planning (Phase 2: now)
+- [x] Phase 1 research → [[Phase 1 Research Dossier]]
+- [x] Phase 2 drafts: [[Core Loop]], [[Progression Curve]], [[First 10 Minutes]], [[MVP Priority Matrix]], [[Architecture]], [[Car Model Spec]]
+- [ ] **Cristian:** answer the ⭐ items in [[Open Questions]] (night map, starters, bust fine, race types)
+- [ ] **Cristian:** review the proposed numbers → mark notes 🟢 Locked
 
 ## 🧪 Tech tests (allowed during planning)
-- [ ] Drift test: can we get the NFS Heat drift feel in Roblox?
+- [ ] Drift test: custom raycast chassis on a placeholder car
+- [ ] Server Authority test: one car, 4G network simulation (optional)
 
-## 🔨 Building (locked until planning is done)
+## 🚗 Partner
+- [ ] Car #1 (a starter) built to the [[Car Model Spec]] → test import together
+- [ ] Then the other 2 starters
+
+## 🔨 Building (Phase 3: after Lock)
+1. [ ] Chassis + data saving + ConfigService
+2. [ ] PR + parts + Garage UI + Dealership + Economy
+3. [ ] Day races (Drag first) + HUD + FTUE
+4. [ ] Night place + cops + Heat + safehouse + gas stations
+5. [ ] Monetization + dailies + codes + cosmetics + analytics
+6. [ ] Phone / 4G playtest → soft launch
 
 ## ✅ Done
 - [x] Set up shared vault
 - [x] Compartmentalized vault structure
+- [x] Hub + city + tracks built in Studio

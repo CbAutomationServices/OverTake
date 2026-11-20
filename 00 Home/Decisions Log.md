@@ -108,3 +108,13 @@
 | 2026-11-16 | East city + suburbs built (East Side, Arts, Eastlake, Eastlake Village + lake, Northgate, Stadium District, Capitol Hill, Stadium Heights, Southpoint) | 05 | Cristian |
 | 2026-11-16 | Speedway detail pass: Daytona-style main grandstand, SAFER barrier, wall sponsor boards, start/finish + flag stand, scoring pylon, dark asphalt | 05 | Cristian |
 | 2026-11-17 | Roads upgraded: PBR asphalt (global Asphalt override), black race asphalt at the speedway, double-yellow/edge lines/crosswalks/stop bars in new districts, Garage Circle island | 05, 12 | Cristian |
+| 2026-11-19 | Phase 1 research done → [[Phase 1 Research Dossier]] | 00 | Cristian |
+| 2026-11-19 | Hub/overworld always stays day; player picks Day or Night from it (confirms 11-12) | 05, 08 | Cristian |
+| 2026-11-19 | Day races pay **cash only**; night races pay **a little cash + Rep + Heat** | 06, 07 | Cristian |
+| 2026-11-19 | Police are essential and **required for progression**: Rep level gates parts (and cars), and Rep only comes from night | 07, 08 | Cristian |
+| 2026-11-19 | Higher Heat = faster, tougher cop cars + harder AI | 08 | Cristian |
+| 2026-11-19 | 5 Heat levels, plus a hidden **Heat 6** after 30 min at Heat 5 (exponentially harder) | 08 | Cristian |
+| 2026-11-19 | Busted = **lose unbanked Rep + a fine** (replaces "lose that night's cash"; fine amount open) | 08 | Cristian |
+| 2026-11-19 | Build our **own custom chassis** (not A-Chassis) | 11 | Cristian |
+| 2026-11-19 | Launch goal = **10–15 cars** (replaces 30+) | 02 | Cristian |
+| 2026-11-19 | Partner's main job = **3D car models** | 00, 02, 12 | Cristian |

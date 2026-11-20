@@ -1,39 +1,46 @@
 # Open Questions
 
-Master list. Answered questions move to the section note + [[Decisions Log]].
+Only questions that are still OPEN live here. Answered → section note + [[Decisions Log]].
+⭐ = blocks Phase 2 / MVP. Items marked *(proposed: …)* have a draft answer waiting for a yes/no.
 
 ## 01 Game Design
-- [x] Multiplayer: free roam + race menu (see [[Decisions Log]])
-- [ ] AI racers too, or players only?
-- [ ] Target audience age
+- [ ] AI racers in day races, or players only? *(proposed: players + AI fill-ins so a race always starts)*
+- [ ] Target audience age *(assumed 10–16)*
 - [ ] Is "OverTake" the final name?
+
 ## 02 Cars
-- [x] Real-looking, made-up names
-- [x] 30+ cars at launch
-- [x] JDM, muscle, euro/exotic, off-road/trucks, classics later
-- [x] Any car can max out
-- [ ] Stats shown on a car (speed, accel, handling, nitrous...?)
+- [ ] ⭐ The 3 starter cars (one JDM, one muscle, one euro?) → [[Starter Cars]]
+- [ ] ⭐ Stats shown on a car *(proposed: Speed, Accel, Handling, Nitro + PR)* → [[Car Stats Explained]]
+- [ ] Which 10–15 cars, split by tier *(proposed split in [[Car Stats]])*
+
 ## 03 Upgrades & Parts
-- [x] Part slots → [[_Parts Index]]
-- [x] 6 levels → [[Part Levels]]
-- [x] Rep (night) + money
-- [ ] Which tuning options → [[Tuning]]
+- [ ] Can tuning push a car across a tier line? *(proposed: no, clamped)* → [[Tuning]]
+- [ ] Turbo/supercharger variants: separate items, or unlocked by level? → [[Turbo]]
+- [ ] Which visual items at launch → [[Visual Customization]]
+
 ## 04 Performance & Tiers
-- [x] 60–500, 6 tiers C/B/A/S/SS/Z
-- [x] Tier names and cutoffs → [[Tier Settings]]
-- [x] Tiers = classes, races locked by tier
+- [ ] ⭐ PR formula + each car's max PR *(proposed in [[Performance Rating]])*
+- [ ] Tier colors/badges; one leaderboard per tier?
+
 ## 05 World & Maps
-- [ ] Map size and setting (city, desert, mountains, coast?)
-- [ ] Real place inspiration?
+- [ ] ⭐ **MVP night map:** night happens on real-place maps, and none are built yet. Build Tokyo first, or make the current City v2 (Seattle-style) the first night map? → [[MVP Priority Matrix]]
+- [ ] ⭐ Safehouse locations on the night map
+
 ## 06 Races & Events
-- [ ] Which race types
+- [ ] ⭐ MVP race types *(proposed: Circuit, Sprint, Drag, Drift)* → [[_Race Index]]
+- [ ] Drag: manual shifting? 1v1 only? distance?
+- [ ] Ghosting (no collisions) in races?
+
 ## 07 Economy
-- [ ] Currencies (cash only? cash + rep?)
+- [ ] Premium currency name
+- [ ] Booster multiplier, duration, stacking → [[Boosters]]
+- [ ] Loot boxes: contents, odds, duplicates *(proposed: post-launch, cosmetics only)* → [[Loot Boxes]]
+- [ ] Does each Rep level unlock a part level for all slots at once? *(proposed: yes)* → [[Unlocks]]
+
 ## 08 Police & Heat
-- [x] Cops: yes
-- [ ] AI cops, player cops, or both?
+- [ ] ⭐ Bust fine amount *(proposed in [[Heat Settings]])*
+- [ ] What each Heat level adds *(proposed in [[Heat Settings]])*
+- [ ] Max players per night server
+
 ## 10 UI
-- [ ] Garage / dealership / HUD layout
-## 05 City v2
-- [x] Metro: scenery only
-- [x] Water: west bay + waterfront (Sky Needle on its NW corner)
+- [ ] Layout sign-off for Garage, Upgrade Shop, HUD *(proposals in each note)*
