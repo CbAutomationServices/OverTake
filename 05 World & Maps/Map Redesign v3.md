@@ -11,7 +11,11 @@ Replaces the current hub layout. Everything gets rebuilt with the new Blender me
 - **A city that feels alive:** dense, varied buildings, props, signs, things to look at
 - **Runs on phones** (budget below)
 
-## Regions (proposed layout: concept map in this folder)
+## Chosen layout: Horizon Valley (2026-11-20)
+![[Map v3 - 3 Horizon Valley.png]]
+The table below is the old (ring highway) concept, kept for reference; regions now follow the Horizon Valley map.
+
+## Regions (old concept)
 | Region | What's there | Driving it gives you |
 |---|---|---|
 | **Downtown** (generic big US city) | Skyscrapers, offices, bank, hotel, police HQ, plaza, elevated train (scenery) | Tight street racing, night chases |

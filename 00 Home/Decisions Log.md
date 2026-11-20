@@ -137,3 +137,4 @@
 | 2026-11-20 | v3 regions: ring highway + long freeways, mountains + touge passes, coast + harbor/port, farmland + small towns (reference: Forza Horizon-style open highway map) | 05 | Cristian |
 | 2026-11-20 | City vibe for v3: **generic big US city** (replaces the Seattle/PNW style) | 05, 12 | Cristian |
 | 2026-11-20 | Buildings are made in Blender with real PBR textures (Poly Haven, CC0) → imported as meshes. **At least 20 building types**: repeatable fillers + key buildings | 12 | Cristian |
+| 2026-11-20 | **Map v3 layout = Horizon Valley** (Forza Horizon-inspired): coast city in the SW, scenic highway loop through the countryside (NOT around the city), 4 small towns, lake, festival hub, forest off-road, speedway, north-peaks touge, 2 freeways; ring-highway concept dropped → `References/Map v3 - 3 Horizon Valley.png` | 05 | Cristian |
