@@ -11,9 +11,9 @@ Made in Blender with real CC0 PBR textures (Poly Haven) → imported as meshes. 
 | # | Building | Variants | Where |
 |---|---|---|---|
 | 1 | Brick tenement, 5–7 floors | ✅ v1 imported: asset **139420612631871** (OT_Tenement_A), ~11k tris, 14 meshes · colors, water tower on/off | Inner neighborhoods |
-| 2 | Brick walk-up, 3–4 floors | ⏳ | Neighborhoods |
+| 2 | Brick walk-up, 3–4 floors | 🟡 rendered + exported (OT_WalkUp_A, ~3k tris), awaiting OK | Neighborhoods |
 | 3 | Brownstone rowhouses | ⬜ | Neighborhoods |
-| 4 | Storefront row, 2 floors (shops below) | ⬜ swap shop signs | Main streets, towns |
+| 4 | Storefront row, 2 floors (shops below) | 🟡 rendered + exported (OT_Storefront_A, ~1.8k tris), awaiting OK · swap shop signs | Main streets, towns |
 | 5 | Mid-rise office (limestone), 8–12 floors | ⬜ | Downtown edge |
 | 6 | Modern apartment block with balconies | ⬜ | Neighborhoods |
 | 7 | Glass skyscraper | ⬜ 3 heights | Downtown |
@@ -29,9 +29,9 @@ Made in Blender with real CC0 PBR textures (Poly Haven) → imported as meshes. 
 ## Key buildings (one or a few each)
 | # | Building | Notes |
 |---|---|---|
-| 16 | **Player Garage** (exterior + interior) | Game starts here; night safehouse |
+| 16 | **Player Garage** (exterior + interior) | 🟡 exterior rendered + exported (OT_PlayerGarage_A); interior next · game starts here; night safehouse |
 | 17 | **Car dealership** (OverTake Motors) | Showroom glass, cars inside |
-| 18 | **Gas station** (OVERTAKE FUEL) | Night repairs + nitrous; canopy, pumps |
+| 18 | **Gas station** (OVERTAKE FUEL) | 🟡 rendered + exported (OT_GasStation_A) · night repairs + nitrous |
 | 19 | **Police station** | Cop spawn at night |
 | 20 | **Bank** | Columns, steps, vault-door vibe |
 | 21 | **Jewelry store** | Fancy storefront |
