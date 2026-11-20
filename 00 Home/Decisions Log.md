@@ -131,3 +131,6 @@
 | 2026-11-20 | **The Garage is the night safehouse**, plus 1–2 more around the main map | 08 | Cristian |
 | 2026-11-20 | Day and Night are **separate servers**; cop AI runs only on Night servers | 08, 09 | Cristian |
 | 2026-11-20 | Until the race maps get generated, day races teleport to **small placeholder maps** (a track + a building or two) | 05, 06 | Cristian |
+| 2026-11-20 | Day look = **golden afternoon** (warm low sun, long shadows, light haze); lighting pass applied in Studio, original settings backed up in ServerStorage.LightingBackup_Original | 05, 09 | Cristian |
+| 2026-11-20 | Map polish order: lighting → Garage interior → fill the hub → skyline variety → part-count cleanup (381k parts now; too many for phones) | 05, 12 | Cristian |
+
