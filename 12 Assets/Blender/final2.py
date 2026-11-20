@@ -109,7 +109,7 @@ def sky_deco():
     lot(0,-20,44,10)
 @reg("OT_OfficeTower_B",(-46,-56,10),(0,0,30),24,(850,1150))
 def office_tower_b():
-    CO=T_("Concrete","conc",(0.9,0.9,0.9)); FR=C("DarkFrame","25282c",0.4,0.5)
+    CO=T_("Concrete","plaster",(0.82,0.82,0.82)); FR=C("DarkFrame","25282c",0.4,0.5)
     box((0,0,3),(26,22,6),CO,uv=2.0); storefront(0,-11,20,4.4,0.5,10,True)
     tower(22,18,6,54,CO,9,7,15,FR,0.35)
     for i in range(3): box((-11.2,-9.2,6+18*i+9),(0.6,0.6,18),CO)
@@ -117,7 +117,7 @@ def office_tower_b():
     box((0,-9.1,60.2),(22,0.06,0.25),C("LEDStrip","e8f2ff",0.3,emit=5.0)); lot(0,-16,40,10)
 @reg("OT_ParkingGarage_A",(-40,-46,10),(0,-2,6),24,(1150,780))
 def garage():
-    CO=T_("Concrete","conc",(0.88,0.88,0.86)); RED=C("Red","c4261d",0.45); YEL=C("Yellow","e8b81e",0.5)
+    CO=T_("Concrete","plaster",(0.82,0.82,0.82)); RED=C("Red","c4261d",0.45); YEL=C("Yellow","e8b81e",0.5)
     W,D=40,28; FZ=-D/2
     for lv in range(5):
         z=lv*3.2; box((0,0,z+0.15),(W,D,0.3),CO,uv=3.0)
@@ -134,10 +134,11 @@ def garage():
     lot(0,FZ-6,W+10,10)
 @reg("OT_Warehouse_A",(-44,-50,10),(0,-2,5),24,(1150,780))
 def warehouse():
-    CR=T_("Corrugated","corr",(0.7,0.72,0.76),0.6,True); CB=T_("Block","conc",(0.88,0.86,0.82)); BLU=C("WhBlue","1f4e8c",0.45); YEL=C("Yellow","e8b81e",0.5)
+    CR=C("WhMetal","aab4bf",0.45,0.5); CB=T_("Block","plaster",(0.82,0.82,0.82)); BLU=C("WhBlue","1f4e8c",0.45); YEL=C("Yellow","e8b81e",0.5)
     W,D,H=50,30,11; FZ=-D/2
     box((0,0,1.5),(W,D,3),CB,uv=2.0); box((0,0,3+(H-3)/2),(W,D,H-3),CR,uv=3.0)
-    gable(0,0,H,W,D,2.0,CR,"x",0.3)
+    gable(0,0,H,W,D,2.0,C("RoofGrey","6f757c",0.5,0.4),"x",0.3)
+    for k in range(51): box((-W/2+k*1.0,FZ-0.04,3+(H-3)/2),(0.12,0.08,H-3),C("Rib","8e98a3",0.45,0.5))
     box((0,FZ-0.06,3.1),(W+0.1,0.15,0.3),BLU)
     for i in range(6):
         x=-20+i*7.5; box((x,FZ-0.02,2.2),(3.8,0.1,4.2),C("DockDoor","b8bcc2",0.5,0.4)); box((x,FZ-0.5,1.0),(4.2,1,0.2),C("Bumper","1a1a1a",0.7))
@@ -197,7 +198,7 @@ def farm():
     for (x,y) in ((-24,6),(-26,-2),(28,-6)): tree(x,y,1.4)
 @reg("OT_TunerShop_A",(-30,-36,6),(0,-4,4),24)
 def tuner():
-    CR=T_("Corrugated","corr",(0.25,0.26,0.28),0.6,True); CO=T_("Concrete","conc",(0.75,0.75,0.76)); PUR=C("NeonPurple","b24bff",0.3,emit=6.0); CY=C("NeonCyan","2fe0ff",0.3,emit=6.0)
+    CR=T_("Corrugated","corr",(0.25,0.26,0.28),0.6,True); CO=T_("Concrete","plaster",(0.82,0.82,0.82)); PUR=C("NeonPurple","b24bff",0.3,emit=6.0); CY=C("NeonCyan","2fe0ff",0.3,emit=6.0)
     W,D,H=28,18,8; FZ=-D/2
     box((0,0,H/2),(W,D,H),CR,uv=2.5); box((0,0,0.5),(W+0.2,D+0.2,1.0),CO)
     for i,x in enumerate((-8,0)):
@@ -290,7 +291,7 @@ def hospital():
     for x in (16,22): tree(x,-17)
 @reg("OT_CarWash_A",(-26,-30,5),(0,-3,2.5),24)
 def carwash():
-    CB=T_("Block","conc",(0.95,0.95,0.95)); BL=C("WashBlue","1f8fff",0.4); CY=C("NeonCyan","2fe0ff",0.3,emit=6.0); YEL=C("Yellow","e8b81e",0.5)
+    CB=T_("Block","plaster",(0.82,0.82,0.82)); BL=C("WashBlue","1f8fff",0.4); CY=C("NeonCyan","2fe0ff",0.3,emit=6.0); YEL=C("Yellow","e8b81e",0.5)
     W,D,H=24,10,5.5
     for i in range(4):
         x=-9+i*6
@@ -325,7 +326,7 @@ def truckstop():
     for x in (-20,0,20,38): lightpole(x,-28,10,2.0,1)
 @reg("OT_Church_A",(-30,-36,8),(0,-2,9),24,(1000,1000))
 def church():
-    ST=T_("Stone","granite",(0.85,0.82,0.76)); SH=T_("Slate","shingle",(0.5,0.5,0.55)); WHT=C("TrimWhite","f0efe9",0.5)
+    ST=T_("Stone","plaster",(0.86,0.8,0.7)); SH=T_("Slate","shingle",(0.5,0.5,0.55)); WHT=C("TrimWhite","f0efe9",0.5)
     W,D,H=14,26,9
     box((0,2,H/2),(W,D,H),ST,uv=1.6); gable(0,2,H,W,D,6,SH,"y",0.6)
     box((0,-D/2+1-3,9),(6,6,18),ST,uv=1.6); box((0,-D/2+1-3,18.4),(6.6,6.6,0.8),ST)                    # bell tower
@@ -359,7 +360,7 @@ def portcrane():
     for x in (-30,30): lightpole(x,-18,14,2.4,1)
 @reg("OT_Landmark_Tower",(-70,-80,20),(0,0,50),24,(800,1150))
 def landmark():
-    CO=T_("Concrete","conc",(0.92,0.92,0.92)); GL2=C("CurtainGlass","2b4d66",0.06,0.4); LED=C("LEDStrip","e8f2ff",0.3,emit=6.0); GOLD=C("GoldGlow","ffd27a",0.3,emit=3.5)
+    CO=T_("Concrete","plaster",(0.82,0.82,0.82)); GL2=C("CurtainGlass","2b4d66",0.06,0.4); LED=C("LEDStrip","e8f2ff",0.3,emit=6.0); GOLD=C("GoldGlow","ffd27a",0.3,emit=3.5)
     cyl((0,0,2),14,4,T_("Granite","granite",(0.7,0.7,0.72)),32)
     for k in range(3):
         a=math.radians(k*120); box((math.cos(a)*6,math.sin(a)*6,24),(3,3,48),CO,rot=(0,0,a))
