@@ -9,7 +9,7 @@ How the code is organized in Studio. Each vault section maps to its own module (
 | Place | What runs there |
 |---|---|
 | **Overworld** (current place) | Starts in the Garage. Each server runs in **Day mode** (race markers, no cops) or **Night mode** (night lighting, AI cops, Heat, night races) |
-| **Race instances** | Day races teleport here when the queue fills. At launch: copies of the hub tracks (Speedway, Drag Strip, Pass). Later: Tokyo, LA, Miami |
+| **Race maps** | Day races teleport here when the queue fills. **For now: small placeholder maps** (one track + a building or two each: a drag strip, a circuit, a sprint road). Later: generated Tokyo, LA, Miami |
 
 Exit Garage → Day/Night prompt → if this server is the wrong mode, **TeleportService** moves you to a server of the right mode (a reserved/matched server with `mode` in its teleport data). Player data saves before every teleport, and ProfileStore's session lock stops it loading on two servers at once.
 

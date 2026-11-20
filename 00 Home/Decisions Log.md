@@ -126,3 +126,8 @@
 | 2026-11-19 | Bust fine = all unbanked night cash + 10% of the cash you brought in (max $50,000) | 08 | Cristian |
 | 2026-11-19 | Launch race types: **Circuit, Sprint, Drag** (Drift moved to post-launch) | 06 | Cristian |
 | 2026-11-19 | **AI racers fill empty spots** so a race always starts | 06 | Cristian |
+| 2026-11-20 | Starter cars: decide **last**, once the map and systems are built | 02, 07 | Cristian |
+| 2026-11-20 | Garage shows PR + tier + 4 bars (Speed, Accel, Handling, Nitro) **and the car's full upgrade level** (every part's level) | 02, 10 | Cristian |
+| 2026-11-20 | **The Garage is the night safehouse**, plus 1–2 more around the main map | 08 | Cristian |
+| 2026-11-20 | Day and Night are **separate servers**; cop AI runs only on Night servers | 08, 09 | Cristian |
+| 2026-11-20 | Until the race maps get generated, day races teleport to **small placeholder maps** (a track + a building or two) | 05, 06 | Cristian |

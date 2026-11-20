@@ -9,7 +9,7 @@
 
 ## What's on screen (proposed)
 - Car on a turntable, center. **PR + tier badge** top-center, big (e.g. **C 84**)
-- 4 stat bars (Speed / Accel / Handling / Nitro) → [[Car Stats Explained]]
+- 4 stat bars (Speed / Accel / Handling / Nitro) + a row of **7 part-level chips** and an "Upgrades 14/35" counter → [[Car Stats Explained]]
 - Bottom row of big buttons: **Upgrade** · **Customize** · **Cars** · big **EXIT** → then ☀️ **Day** / 🌙 **Night**
 - The Night choice glows once it's unlocked → [[First 10 Minutes]]
 

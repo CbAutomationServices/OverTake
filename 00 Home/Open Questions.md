@@ -8,8 +8,8 @@ Only questions that are still OPEN live here. Answered → section note + [[Deci
 - [ ] Is "OverTake" the final name?
 
 ## 02 Cars
-- [ ] ⭐ The 3 starter cars (one JDM, one muscle, one euro?) → [[Starter Cars]]
-- [ ] ⭐ Stats shown on a car *(proposed: Speed, Accel, Handling, Nitro + PR)* → [[Car Stats Explained]]
+- [ ] The 3 starter cars → [[Starter Cars]] *(decide LAST, once the map + systems are built)*
+- [x] Stats shown: PR + tier + 4 bars + full upgrade level (2026-11-20) → [[Car Stats Explained]]
 - [ ] Which 10–15 cars, split by tier *(proposed split in [[Car Stats]])*
 
 ## 03 Upgrades & Parts
@@ -24,9 +24,10 @@ Only questions that are still OPEN live here. Answered → section note + [[Deci
 ## 05 World & Maps
 - [x] Night map → the main overworld (2026-11-19)
 - [ ] ⭐ Phone performance budget for the overworld at night (cops + lights + players) → [[MVP Priority Matrix]]
-- [ ] Safehouses: is the Garage the safehouse? Any extra ones? *(proposed: Garage + 1–2 far-side spots)*
-- [ ] Day and Night = separate servers of the same map? *(proposed: yes)*
-- [ ] Which race map do day races teleport to at launch, before Tokyo exists? *(proposed: the hub's own tracks: Speedway, Drag Strip, Pass, city loops, run as race instances)*
+- [x] Safehouses: the Garage + 1–2 more on the main map (2026-11-20)
+- [ ] Where exactly the 1–2 extra safehouses go
+- [x] Day and Night = separate servers; cops only on Night (2026-11-20)
+- [x] Launch race maps: small placeholder maps (a track + a building or two) until generated maps exist (2026-11-20)
 
 ## 06 Races & Events
 - [x] Launch race types: Circuit, Sprint, Drag (2026-11-19)

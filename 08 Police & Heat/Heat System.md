@@ -7,8 +7,8 @@
 - Cops are **AI only**, and **essential**: night Rep is the only way to unlock parts, so every player has to deal with them (2026-11-19).
 - Choosing **night** is a commitment: the only safe way back is a **safehouse**.
 - Night happens **on the main overworld map** (2026-11-19). You choose Night when you exit the Garage. AI cops roam, and night races run around the overworld only.
-- *Proposed:* Day and Night are **separate servers of the same map** (a Night server = the overworld with night lighting + cops on), so day players never get mixed into chases. Confirms the 11-12 "night = separate servers" rule.
-- *Proposed:* **The Garage is the safehouse.** You bank by driving back into it (plus 1–2 extra safehouses on the far side of the map).
+- Day and Night are **separate servers** of the same map. **Cop AI runs only on Night servers** (confirmed 2026-11-20).
+- **The Garage is the safehouse**, plus **1–2 more** around the main map (confirmed 2026-11-20). You bank your Rep by driving into one.
 - **5 Heat levels**, plus a hidden **Heat 6**: stay at Heat 5 for **30 minutes** and it kicks in, exponentially harder (2026-11-19).
 - Higher Heat = **faster, tougher cop cars + harder AI** (2026-11-19). It also scales with your car's tier (2026-11-12).
 - Higher Heat = **bigger reward multiplier** on night Rep & Cash.
@@ -32,4 +32,4 @@ All numbers → [[Heat Settings]]
 
 ## Still open
 - [ ] Bust fine amount (proposal in [[Heat Settings]])
-- [ ] Safehouses: the Garage + which extra spots?
+- [ ] Exact spots for the 1–2 extra safehouses (pick once the map is final)
