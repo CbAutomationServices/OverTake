@@ -105,3 +105,15 @@ def export(name,drop_y=-8.0):
     bpy.ops.export_scene.gltf(filepath=f"/mnt/user-data/outputs/{name}.glb",export_format="GLB",export_image_format="JPEG",export_jpeg_quality=85,export_apply=True,export_yup=True)
     tot=sum(t for _,t in stats); big=max(t for _,t in stats)
     print("EXPORT",name,"tris",tot,"biggest",big,"meshes",len(stats),"size_m",tuple(round(x,1) for x in (mx-mn)))
+def prism(loc,w,h,dep,m,rot_z=0.0,uv=1.5):
+    """triangular gable/pediment: base width w, height h, depth dep (along y), base at loc z"""
+    import bmesh
+    me=bpy.data.meshes.new("prism"); bm=bmesh.new(); x,y,z=loc
+    pts=[(-w/2,-dep/2,0),(w/2,-dep/2,0),(0,-dep/2,h),(-w/2,dep/2,0),(w/2,dep/2,0),(0,dep/2,h)]
+    v=[bm.verts.new(p) for p in pts]
+    for f in ((0,1,2),(5,4,3),(0,3,4,1),(1,4,5,2),(2,5,3,0)): bm.faces.new([v[i] for i in f])
+    bm.to_mesh(me); bm.free(); o=bpy.data.objects.new("prism",me); bpy.context.scene.collection.objects.link(o)
+    o.location=loc; o.rotation_euler=(0,0,rot_z); o.data.materials.append(m); uvbox(o,uv); return o
+def halfcyl(loc,r,dep,m,verts=16,axis="y"):
+    bpy.ops.mesh.primitive_cylinder_add(vertices=verts,radius=r,depth=dep,location=loc,rotation=(math.radians(90),0,0) if axis=="y" else (0,math.radians(90),0))
+    o=bpy.context.object; o.data.materials.append(m); uvbox(o,1.0); return o
