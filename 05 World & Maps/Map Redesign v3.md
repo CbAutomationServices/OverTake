@@ -101,6 +101,18 @@ The table below is the old (ring highway) concept, kept for reference; regions n
 - Pier/lighthouse spot-check in a playtest drive.
 - Then: vehicle chassis (Phase 3 MVP).
 
+### 2026-11-24 · Step 4 City finish ✅
+- **Ground fix**: city buildings and street props were placed 1.7 studs too low, so their lot pads were hidden under the terrain. Re-seated on the surface (y 7.72); `CityFill.GROUND` is now 7.72.
+- **Sidewalks**: 263 curb-height sidewalk strips ringing every city block (skipped where a highway or freeway runs).
+- **Empty lots filled** (`CityFinish.city`): blocks next to the freeway/highways were left empty before. Now +35 buildings, 5 parking lots (lines + a few parked cars), 5 pocket parks, and ~330 trees on lots that touch the big roads.
+- **Viaduct**: removed 28 pillars that stood in the middle of city streets.
+- **Towns** (`CityFinish.towns`): each town got a cross street through the middle with 12 houses along it, sidewalks on both streets, trees, benches, trash cans, hydrants and a stop sign. Town buildings re-seated on the terrain.
+- Parts ≈ 35.2k (budget 60k). Saved v85. Script: [[CityFinish.lua]].
+
+### Next
+- Flatten the Speedway infield.
+- Drive-test (needs the vehicle chassis): check building facing, curb heights, viaduct ramps.
+
 ## Open questions
 - [ ] Sign off on the concept layout
 - [ ] Bay/water on which side?
