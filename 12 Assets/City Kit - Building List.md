@@ -6,7 +6,7 @@ Made in Blender with real CC0 PBR textures (Poly Haven) → GLB → uploaded thr
 Build scripts: `12 Assets/Blender/` (`final1.py`, `final2.py`, `final3.py`; earlier `b_*.py`). Run `python3 final3.py <Name> render|export`.
 Contact sheets: `12 Assets/Blender/renders/`.
 
-**61 models imported.** Where they are in Studio: `Workspace.OT_CityKit_Test` (first batches) and `Workspace.OT_KitGallery` (temporary lineup at x≈7000). Real placement happens in the Map v3 (Horizon Valley) build.
+**92 models imported.** Where they are in Studio: `Workspace.OT_CityKit_Test` (first batches) and `Workspace.OT_KitGallery` (temporary lineup at x≈7000). Real placement happens in the Map v3 (Horizon Valley) build.
 
 ## Key buildings
 | Building | Model | Asset ID |
@@ -41,7 +41,7 @@ Contact sheets: `12 Assets/Blender/renders/`.
 | Auto parts store | OT_AutoParts_A | 133723295269954 |
 | Gym | OT_Gym_A | 128671834889410 |
 | Laundromat | OT_Laundromat_A | 114749799004244 |
-| Car dealership (OverTake Motors) | — | ⬜ planned |
+| Car dealership (OverTake Motors) | OT_Dealership_A | 88435631026570 |
 
 ## Skyscrapers (downtown skyline)
 | Style | Model | Asset ID |
@@ -80,6 +80,52 @@ Contact sheets: `12 Assets/Blender/renders/`.
 | Duplex | OT_Duplex_A | 97635175568796 |
 | Factory | OT_Factory_A | 115352238615619 |
 | Office park | OT_OfficePark_A | 126481219553519 |
+
+## Road pieces (2026-11-24, `final4.py`)
+| Piece | Model | Asset ID |
+|---|---|---|
+| Freeway overpass (40 m deck, 2 pier bents) | OT_Overpass_Freeway | 93753620534177 |
+| Steel arch bridge (64 m) | OT_Bridge_Steel | 70845487328649 |
+| Tunnel portal (interior is a dark panel: make it non-collide or bore terrain when placing) | OT_TunnelPortal | 102598310595710 |
+| Guardrail, 10 m | OT_Guardrail_10m | 127120597964196 |
+| Jersey barrier, 10 m | OT_JerseyBarrier_10m | 119142877931884 |
+| Sign gantry (28 m span, 3 signs) | OT_SignGantry | 78988745115969 |
+| Exit sign | OT_ExitSign | 120159185922017 |
+
+## Street props (`final5.py`)
+| Prop | Model | Asset ID |
+|---|---|---|
+| Traffic light | OT_TrafficLight | 104258957805110 |
+| Street light (double) | OT_StreetLight | 100712066592715 |
+| Stop sign | OT_StopSign | 126888441549007 |
+| Crosswalk paint | OT_Crosswalk | 82698598601124 |
+| Bus stop | OT_BusStop | 127248600225639 |
+| Fire hydrant | OT_Hydrant | 97718346843705 |
+| Trash can | OT_TrashCan | 75059411405838 |
+| Bench | OT_Bench | 110927376365755 |
+| Dumpster | OT_Dumpster | 99574458258262 |
+| Billboard | OT_Billboard | 120943658810190 |
+| Parked car (recolor per copy) | OT_ParkedCar | 110408168738058 |
+
+## Nature
+| Item | Model | Asset ID |
+|---|---|---|
+| Pine tree | OT_Tree_Pine | 104063376201624 |
+| Oak tree | OT_Tree_Oak | 115083337365670 |
+| Palm tree | OT_Tree_Palm | 124144671357690 |
+| Bush | OT_Bush | 96736091338270 |
+| Rock cluster | OT_Rock_A | 82416486064407 |
+
+## Venues
+| Venue piece | Model | Asset ID |
+|---|---|---|
+| Speedway grandstand (70 m) | OT_Grandstand | 82203094826466 |
+| Pit building (10 garages) | OT_PitBuilding | 86915779387566 |
+| Drag strip start tree + tower | OT_DragStartTower | 83627199662516 |
+| Bleachers | OT_Bleachers | 118711758985308 |
+| Festival hub (stage, tents, entry arch) | OT_FestivalHub | 98447290777745 |
+| Lighthouse | OT_Lighthouse | 113656909593608 |
+| Pier (60 m + shop) | OT_Pier | 96486991011205 |
 
 ## Rules
 - Original designs only: no real brands, logos or famous buildings.
