@@ -8,17 +8,21 @@ G.SEA=0; G.LAKE=14; G.LIFT=36
 
 -- ROADS: {name, kind, width, points, closed, flat}
 G.ROADS={
- {"Freeway_NS","Freeway",80,PL{585,40, 572,200, 545,310, 522,430, 503,560, 486,690, 465,800, 438,880}},
- {"Freeway_EW","Freeway",80,PL{300,935, 438,880, 600,850, 800,832, 950,860, 1095,935}},
+ {"Freeway_NS","Freeway",80,PL{550,216, 545,310, 522,430, 503,560, 486,690, 465,800, 438,880}},
+ {"Freeway_EW","Freeway",80,PL{438,880, 600,850, 800,832, 950,860, 1035,900}},
  {"Highway_Loop","Highway",48,PL{330,718, 255,640, 205,560, 196,480, 220,385, 290,300, 400,242, 550,216, 700,236, 805,272, 892,330, 942,402, 966,482, 950,545, 870,612, 782,690, 722,762, 662,770, 562,742, 480,716, 400,708},true},
- {"Highway_West","Highway",44,PL{2,262, 70,318, 120,400, 160,455, 198,482}},
- {"Highway_East","Highway",44,PL{966,484, 1040,470, 1095,462}},
- {"Touge_NW","Touge",26,PL{130,88, 200,115, 255,150, 262,190, 215,235, 200,265, 240,310, 286,350}},
- {"Touge_N","Touge",26,PL{812,40, 835,95, 830,135, 780,165, 752,200, 740,235, 725,262}},
- {"Touge_NE","Touge",26,PL{1035,110, 975,130, 935,165, 935,200, 975,225, 990,262, 955,300, 882,330}},
+ {"Highway_West","Highway",44,PL{70,318, 120,400, 160,455, 196,480}},
+ {"Highway_East","Highway",44,PL{966,482, 1030,492, 1068,540, 1084,620, 1080,700, 1066,790, 1050,858, 1035,900}},
+ {"Touge_NW","Touge",26,PL{130,88, 200,115, 255,150, 262,190, 215,235, 200,265, 240,310, 256,341}},
+ {"Touge_N","Touge",26,PL{812,40, 835,95, 830,135, 780,165, 752,200, 740,235, 724,246}},
+ {"Touge_NE","Touge",26,PL{1035,110, 975,130, 935,165, 935,200, 975,225, 990,262, 955,300, 892,330}},
  {"Dirt_Forest","Dirt",24,PL{742,520, 790,483, 822,490, 840,560, 838,610, 805,640, 762,628, 735,575},true},
  {"Dirt_West","Dirt",22,PL{65,550, 120,528, 152,528, 140,580, 112,636}},
- {"City_Coastal_Blvd","Avenue",40,PL{160,772, 250,850, 330,955, 380,1060}},
+ {"Touge_Summit","Touge",26,PL{812,40, 860,52, 930,62, 990,82, 1035,110}},
+ {"Touge_West","Touge",26,PL{130,88, 88,118, 52,170, 35,235, 48,290, 70,318}},
+ {"Speedway_Access","Avenue",34,PL{637,572, 600,575, 560,574, 505,570}},
+ {"Festival_Access","Avenue",30,PL{514,492, 545,492, 572,490}},
+ {"City_Coastal_Blvd","Avenue",40,PL{255,640, 205,705, 160,772, 250,850, 330,955, 380,1060}},
 }
 -- City grid
 G.CITY_POLY=PL{160,770, 330,705, 470,690, 615,790, 612,872, 780,858, 792,1060, 330,1060, 270,960}
@@ -118,6 +122,14 @@ function G.buildRoadData()
   -- smooth elevations (several passes)
   if not flatElev then for pass=1,4 do local e2={} for i=1,#el do local s,c=0,0 for k=-6,6 do local j=i+k; if closed then j=(j-1)%#el+1 end; if el[j] then s+=el[j]; c+=1 end end e2[i]=s/c end el=e2 end end
   for i=1,#el do el[i]=math.max(el[i],G.SEA+3) end
+  -- grade limit (cuts crests so roads stay drivable)
+  if not flatElev then local g=(kind=="Touge" and 0.18) or 0.08
+   for pass=1,2 do
+    for i=2,#el do local L=(samples[i]-samples[i-1]).Magnitude; el[i]=math.min(el[i],el[i-1]+g*L) end
+    for i=#el-1,1,-1 do local L=(samples[i]-samples[i+1]).Magnitude; el[i]=math.min(el[i],el[i+1]+g*L) end
+   end
+   for i=1,#el do el[i]=math.max(el[i],G.SEA+3) end
+  end
   local lift={}
   for i=1,#el do lift[i]=0 end
   if kind=="Freeway" then
@@ -134,12 +146,13 @@ function G.buildRoadData()
  for ti,t in G.TOWNS do
   local c=t[1]; local best,bd,bdir=1e9,nil,nil
   for _,r in roads do if r.kind=="Highway" or r.kind=="Freeway" then
-   for i=1,#r.pts-1 do local a,b=r.pts[i],r.pts[i+1]; local d=(segDist(c,a,b)); if d<best then best=d; bdir=(b-a).Unit; bd=a end end end end
+   for i=1,#r.pts-1 do local a,b=r.pts[i],r.pts[i+1]; local d,t=segDist(c,a,b); if d<best then best=d; bdir=(b-a).Unit; bd=a+(b-a)*t end end end end
   local perp=Vector2.new(-bdir.Y,bdir.X); if (c-bd):Dot(perp)<0 then perp=-perp end
-  local a=c-perp*math.min(best,250); local b=a+perp*560
+  local len=math.max(560,best+280); local s0=math.max(90,best-210)
+  local a=bd; local b=a+perp*len
   local e=G.Hs(c.X,c.Y)
   add("Town"..ti.."_Main","Avenue",34,{a,b},false,e)
-  G.TOWN_STREETS[ti]={a=a,b=b,dir=perp,el=e}
+  G.TOWN_STREETS[ti]={a=a,b=b,dir=perp,el=e,len=len,s0=s0}
  end
  -- city grid (axis aligned)
  local mn,mx=Vector2.new(1e9,1e9),Vector2.new(-1e9,-1e9)
@@ -147,7 +160,13 @@ function G.buildRoadData()
  local st=G.CITY_STEP; local id=0
  for x=math.ceil(mn.X/st)*st,mx.X,st do local run=nil
   for z=mn.Y,mx.Y+st,st/2 do local p=Vector2.new(x,z); local ins=inPoly(p,G.CITY_POLY) and polyEdgeDist(p,G.CITY_POLY)>40
-   if ins and not run then run={p} elseif ins then run[2]=p elseif run then if run[2] then id+=1; add("CityNS_"..id,"Street",34,{run[1],run[2]},false,6) end run=nil end end end
+   if ins and not run then run={p} elseif ins then run[2]=p elseif run then if run[2] then
+    local dz0=math.floor(G.DRAG.a.Y/st)*st; local dz1=dz0+st
+    if x>G.DRAG.a.X-60 and x<G.DRAG.b.X+60 and run[1].Y<dz1 and run[2].Y>dz0 then
+     if dz0-run[1].Y>40 then id+=1; add("CityNS_"..id,"Street",34,{run[1],Vector2.new(x,dz0)},false,6) end
+     if run[2].Y-dz1>40 then id+=1; add("CityNS_"..id,"Street",34,{Vector2.new(x,dz1),run[2]},false,6) end
+    else id+=1; add("CityNS_"..id,"Street",34,{run[1],run[2]},false,6) end
+   end run=nil end end end
  for z=math.ceil(mn.Y/st)*st,mx.Y,st do local run=nil
   for x=mn.X,mx.X+st,st/2 do local p=Vector2.new(x,z); local ins=inPoly(p,G.CITY_POLY) and polyEdgeDist(p,G.CITY_POLY)>40
    if ins and not run then run={p} elseif ins then run[2]=p elseif run then if run[2] then id+=1; add("CityEW_"..id,"Street",34,{run[1],run[2]},false,6) end run=nil end end end
@@ -156,12 +175,67 @@ function G.buildRoadData()
  for k=0,23 do local a=k/24*math.pi*2; ov[#ov+1]=sp.c+Vector2.new(math.cos(a)*sp.rx,math.sin(a)*sp.rz) end
  add("Speedway_Oval","Track",sp.width,ov,true,G.Hs(sp.c.X,sp.c.Y))
  add("Drag_Strip","Track",G.DRAG.width,{G.DRAG.a,G.DRAG.b},false,6)
+ local da,db=G.DRAG.a,G.DRAG.b
+ local dz1=(math.floor(da.Y/st)+1)*st
+ add("Drag_Access","Street",34,{Vector2.new(math.floor(da.X/st)*st,da.Y),da},false,6)
+ add("Drag_Return","Street",34,{db,db+Vector2.new(60,30),db+Vector2.new(75,dz1-da.Y-120),Vector2.new(db.X+8,dz1)},false,6)
+ G.spEl=G.Hs(sp.c.X,sp.c.Y)
+ -- ===== junction snapping: every road end meets another road at the same height =====
+ local function nearestOn(p,self)
+  local best,q,qe,qr=1e9
+  for _,o in roads do if o~=self and o.kind~="Dirt" then local m=#o.pts; local last=o.closed and m or m-1
+   for i=1,last do local j=i%m+1; if (o.lift[i] or 0)<=4 then local d,t=segDist(p,o.pts[i],o.pts[j]); if d<best then best=d; q=o.pts[i]+(o.pts[j]-o.pts[i])*t; qe=o.el[i]+(o.el[j]-o.el[i])*t; qr=o end end end end end
+  return best,q,qe,qr
+ end
+ local function rayHit(p,dir,maxL,self)
+  local best,q,qe=1e9
+  for _,o in roads do if o~=self and o.kind~="Dirt" then local m=#o.pts; local last=o.closed and m or m-1
+   for i=1,last do local j=i%m+1; if (o.lift[i] or 0)<=4 then
+    local a,b=o.pts[i],o.pts[j]; local e=b-a; local den=dir.X*e.Y-dir.Y*e.X
+    if math.abs(den)>1e-6 then local w=a-p; local t=(w.X*e.Y-w.Y*e.X)/den; local u=(w.X*dir.Y-w.Y*dir.X)/den
+     if t>1 and t<maxL and u>=0 and u<=1 and t<best then best=t; q=a+e*u; qe=o.el[i]+(o.el[j]-o.el[i])*u end end end end end end
+  return best,q,qe
+ end
+ for _,r in roads do if not r.closed and r.kind~="Dirt" then
+  for _,first in {true,false} do
+   local n=#r.pts; local ei=first and 1 or n; local ni=first and 2 or n-1
+   if (r.lift[ei] or 0)>4 then continue end
+   local p=r.pts[ei]; local dir=(p-r.pts[ni]).Unit
+   local d,q,qe=nearestOn(p,r)
+   if r.kind=="Street" and r.name:find("^City") then local rd,rq,re=rayHit(p,dir,420,r); if rd<1e9 and (d>2) then d,q,qe=rd,rq,re end end
+   local lim=(r.kind=="Street") and 420 or 160
+   if q and d>1 and d<lim then
+    local steps=math.max(1,math.floor(d/30)); local e0=r.el[ei]
+    for k=1,steps do local t=k/steps; local np=p+(q-p)*t; local ne=e0+(qe-e0)*t
+     if first then table.insert(r.pts,1,np); table.insert(r.el,1,ne); table.insert(r.lift,1,0) else table.insert(r.pts,np); table.insert(r.el,ne); table.insert(r.lift,0) end end
+   end
+   if q and d<lim then
+    n=#r.pts; ei=first and 1 or n
+    local delta=qe-r.el[ei]; local gg=(r.kind=="Touge" and 0.16) or 0.07; local K=math.clamp(math.ceil(math.abs(delta)/(gg*30))+1,3,n-1)
+    for k=0,K do local idx=first and (1+k) or (n-k); if (r.lift[idx] or 0)<=4 then r.el[idx]+=delta*(1-k/(K+1))^1 end end
+   end
+  end
+ end end
+ -- settle: re-limit grades and re-snap junction heights until they agree
+ local function limit(r) if r.kind=="Freeway" or r.kind=="Track" then return end
+  local g=(r.kind=="Touge" and 0.18) or 0.08; local e=r.el; local P=r.pts
+  for pass=1,2 do for i=2,#e do local L=(P[i]-P[i-1]).Magnitude; e[i]=math.min(e[i],e[i-1]+g*L) end
+   for i=#e-1,1,-1 do local L=(P[i]-P[i+1]).Magnitude; e[i]=math.min(e[i],e[i+1]+g*L) end end end
+ for iter=1,8 do
+  for _,r in roads do limit(r) end
+  for _,r in roads do if not r.closed and r.kind~="Dirt" then for _,first in {true,false} do
+   local n=#r.pts; local ei=first and 1 or n; if (r.lift[ei] or 0)>4 then continue end
+   local d,q,qe=nearestOn(r.pts[ei],r)
+   if q and d<3 then local delta=qe-r.el[ei]; local gg=(r.kind=="Touge" and 0.16) or 0.07; local K=math.clamp(math.ceil(math.abs(delta)/(gg*30))+1,3,n-1)
+    for k=0,K do local idx=first and (1+k) or (n-k); if (r.lift[idx] or 0)<=4 then r.el[idx]+=delta*(1-k/(K+1)) end end end
+  end end end
+ end
  G.roads=roads
  -- spatial index of segments
  local CELL=256; local grid={}
  for ri,r in roads do local n=#r.pts; local last=r.closed and n or n-1
   for i=1,last do local j=i%n+1; local a,b=r.pts[i],r.pts[j]; local R=r.width/2+60
-   if (r.lift[i] or 0)>4 or (r.lift[j] or 0)>4 then continue end
+   if (r.lift[i] or 0)>10 or (r.lift[j] or 0)>10 then continue end
    local x0,x1=math.floor((math.min(a.X,b.X)-R)/CELL),math.floor((math.max(a.X,b.X)+R)/CELL)
    local z0,z1=math.floor((math.min(a.Y,b.Y)-R)/CELL),math.floor((math.max(a.Y,b.Y)+R)/CELL)
    for cx=x0,x1 do for cz=z0,z1 do local k=cx*100000+cz; grid[k]=grid[k] or {}; table.insert(grid[k],{a,b,r.el[i],r.el[j],r.width/2,r.kind}) end end end end
@@ -199,9 +273,11 @@ function G.column(x,z)
  local r,over=roadAt(x,z)
  if r then
   local core=r[4]+8
-  if r[3]<=core then h=r[1]-0.3; mat=(r[2]=="Dirt") and M.Ground or M.Asphalt; water=nil
-  elseif r[3]<core+50 then local w=1-sstep((r[3]-core)/50); h=h+((r[1]-0.3)-h)*w; if r[2]=="Dirt" and w>0.5 then mat=M.Mud end end
+  if r[3]<=core then h=r[1]-1.0; mat=(r[2]=="Dirt") and M.Ground or M.Asphalt; water=nil
+  elseif r[3]<core+50 then local w=1-sstep((r[3]-core)/50); h=h+((r[1]-1.0)-h)*w; if r[2]=="Dirt" and w>0.5 then mat=M.Mud end end
  end
+ do local sp=G.SPEEDWAY; local v=p-sp.c; local e2=(v.X/sp.rx)^2+(v.Y/sp.rz)^2
+  if e2<1 then h=(G.spEl or h)-1.0; if mat~=M.Asphalt then mat=M.Grass end; water=nil end end
  if h<G.SEA and not water and cs<60 then water=G.SEA end
  return h,mat,water
 end

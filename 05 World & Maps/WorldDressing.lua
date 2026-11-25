@@ -58,7 +58,7 @@ function W.towns(parent)
 		local f=Instance.new("Folder"); f.Name="Town"..ti; f.Parent=T
 		local list=TOWN[ti] or TOWN[1]; local k=0
 		local perp=Vector2.new(-ts.dir.Y,ts.dir.X)
-		for t=90,540,105 do
+		for t=(ts.s0 or 90),(ts.s0 or 90)+450,105 do
 			for s=-1,1,2 do
 				k+=1; local name=list[(k-1)%#list+1]
 				local p=ts.a+ts.dir*t+perp*s*(17+10+55)

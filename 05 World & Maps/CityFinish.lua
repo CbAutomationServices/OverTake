@@ -154,23 +154,23 @@ function F.towns(HV)
 	for ti,ts in G.TOWN_STREETS do
 		local f=HV.Towns:FindFirstChild("Town"..ti); if not f then continue end
 		local dir,a=ts.dir,ts.a; local perp=Vector2.new(-dir.Y,dir.X)
-		local roadTop=ts.el+1.9
+		local roadTop=ts.el+1.9; local mc=(ts.s0 or 90)+210; local len=ts.len or 560
 		-- 1) clear the slot for the cross street, re-seat the rest on the terrain
 		for _,m in f:GetChildren() do
 			local c=m:GetBoundingBox(); local v=Vector2.new(c.X,c.Z)-a
 			local t,o=v:Dot(dir),v:Dot(perp)
-			if math.abs(t-300)<62 and math.abs(o)<160 then m:Destroy(); stats.removed+=1
+			if math.abs(t-mc)<62 and math.abs(o)<160 then m:Destroy(); stats.removed+=1
 			else bottomTo(m,m.Name:find("StreetLight") and roadTop+0.4 or math.max(roadTop,groundY(Vector2.new(c.X,c.Z)))+0.05); stats.moved+=1 end
 		end
 		local X=Instance.new("Folder"); X.Name="Additions"
 		-- 2) main street sidewalks + props
 		for s=-1,1,2 do
-			for _,seg in {{0,284},{316,560}} do
+			for _,seg in {{0,mc-16},{mc+16,len}} do
 				local t0,t1=seg[1],seg[2]; local mid=a+dir*((t0+t1)/2)+perp*s*22
 				local cf=CFrame.lookAt(Vector3.new(mid.X,roadTop+0.2-0.6,mid.Y),Vector3.new(mid.X+dir.X,roadTop-0.4,mid.Y+dir.Y))
 				part(X,Vector3.new(10,1.2,t1-t0),cf,Enum.Material.Concrete,CONC,"Sidewalk")
 			end
-			for t=40,540,105 do if math.abs(t-300)>40 then
+			for t=40,len-20,105 do if math.abs(t-mc)>40 then
 				local p=a+dir*t+perp*s*22
 				if CF.place(ti%2==0 and "Tree_Oak" or "Tree_Palm",p,V3(-perp*s),nil,nil,X,roadTop+0.4,0.1) then stats.props+=1 end
 				local p2=a+dir*(t+22)+perp*s*24
@@ -178,11 +178,14 @@ function F.towns(HV)
 				if CF.place(it,p2,V3(-perp*s),nil,nil,X,roadTop+0.4,0.1) then stats.props+=1 end
 			end end
 		end
-		CF.place("StopSign",a+dir*270+perp*20,V3(dir),nil,nil,X,roadTop+0.4,0.1)
+		do local e=a+dir*len; local cul=part(X,Vector3.new(2,78,78),CFrame.new(e.X,roadTop-1,e.Y)*CFrame.Angles(0,0,math.pi/2),Enum.Material.Asphalt,Color3.fromRGB(56,58,62),"CulDeSac"); cul.Shape=Enum.PartType.Cylinder
+			local cw=part(X,Vector3.new(1.2,90,90),CFrame.new(e.X,roadTop-0.4,e.Y)*CFrame.Angles(0,0,math.pi/2),Enum.Material.Concrete,CONC,"CulDeSacCurb"); cw.Shape=Enum.PartType.Cylinder
+			workspace.Terrain:FillCylinder(CFrame.new(e.X,roadTop+15,e.Y),30,48,Enum.Material.Air) end
+		CF.place("StopSign",a+dir*(mc-30)+perp*20,V3(dir),nil,nil,X,roadTop+0.4,0.1)
 		-- 3) cross street through the middle of town
 		local W=28
 		for s=-1,1,2 do
-			local p0=a+dir*300+perp*s*17; local p1=a+dir*300+perp*s*430
+			local p0=a+dir*mc+perp*s*17; local p1=a+dir*mc+perp*s*430
 			local a3=Vector3.new(p0.X,roadTop,p0.Y); local b3=Vector3.new(p1.X,roadTop,p1.Y)
 			flattenStrip(a3,b3,W,roadTop-0.3)
 			local mid=(a3+b3)/2
@@ -191,11 +194,11 @@ function F.towns(HV)
 				local smid=mid+V3(dir)*side*(W/2+5)
 				part(X,Vector3.new(10,1.2,(b3-a3).Magnitude),CFrame.lookAt(smid,smid+(b3-a3)),Enum.Material.Concrete,CONC,"Sidewalk").CFrame*=CFrame.new(0,-0.4,0)
 			end
-			for u=70,400,110 do CF.place("StreetLight",a+dir*(300+W/2+5)+perp*s*u,V3(-dir),nil,nil,X,roadTop+0.4,0.1) end
+			for u=70,400,110 do CF.place("StreetLight",a+dir*(mc+W/2+5)+perp*s*u,V3(-dir),nil,nil,X,roadTop+0.4,0.1) end
 			-- houses on both sides of the cross street
 			for _,v in {-1,1} do
 				for k,u in {200,300,400} do
-					local p=a+dir*(300+v*(W/2+10+46))+perp*s*u
+					local p=a+dir*(mc+v*(W/2+10+46))+perp*s*u
 					local gy=groundY(p)
 					if CF.place(pick(RES),p,V3(-dir*v),92,90,X,math.max(gy,roadTop-0.2),0.45) then stats.houses+=1 end
 				end
