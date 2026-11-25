@@ -13,7 +13,7 @@ G.ROADS={
  {"Highway_Loop","Highway",48,PL{330,718, 255,640, 205,560, 196,480, 220,385, 290,300, 400,242, 550,216, 700,236, 805,272, 892,330, 942,402, 966,482, 950,545, 870,612, 782,690, 722,762, 662,770, 562,742, 480,716, 400,708},true},
  {"Highway_West","Highway",44,PL{70,318, 120,400, 160,455, 196,480}},
  {"Highway_East","Highway",44,PL{966,482, 1030,492, 1068,540, 1084,620, 1080,700, 1066,790, 1050,858, 1035,900}},
- {"Touge_NW","Touge",26,PL{130,88, 200,115, 255,150, 262,190, 215,235, 200,265, 240,310, 256,341}},
+ {"Touge_NW","Touge",26,PL{130,88, 200,115, 255,150, 262,190, 215,235, 200,265, 240,310, 260,328}},
  {"Touge_N","Touge",26,PL{812,40, 835,95, 830,135, 780,165, 752,200, 740,235, 724,246}},
  {"Touge_NE","Touge",26,PL{1035,110, 975,130, 935,165, 935,200, 975,225, 990,262, 955,300, 892,330}},
  {"Dirt_Forest","Dirt",24,PL{742,520, 790,483, 822,490, 840,560, 838,610, 805,640, 762,628, 735,575},true},
@@ -230,6 +230,20 @@ function G.buildRoadData()
     for k=0,K do local idx=first and (1+k) or (n-k); if (r.lift[idx] or 0)<=4 then r.el[idx]+=delta*(1-k/(K+1)) end end end
   end end end
  end
+ -- level each joining road's approach onto the road it meets, then blend back to its own profile
+ for _,r in roads do if not r.closed and r.kind~="Dirt" then for _,first in {true,false} do
+  local n=#r.pts; local ei=first and 1 or n
+  local d0,q0,qe0,o=nearestOn(r.pts[ei],r)
+  if o and d0<3 then local lastK,delta
+   for k=0,math.min(8,n-1) do local idx=first and 1+k or n-k
+    local p=r.pts[idx]; local m_=#o.pts; local lastO=o.closed and m_ or m_-1; local best,be=1e9,nil
+    for ii=1,lastO do local jj=ii%m_+1; local d,t=segDist(p,o.pts[ii],o.pts[jj]); if d<best then best=d; be=o.el[ii]+(o.el[jj]-o.el[ii])*t end end
+    if best<(r.width+o.width)/2+6 then lastK=k; delta=be-r.el[idx]; r.el[idx]=be end
+   end
+   if lastK then local gg=(r.kind=="Touge" and 0.16) or 0.07; local K=math.clamp(math.ceil(math.abs(delta)/(gg*30))+1,2,n-2-lastK)
+    for k2=1,K do local idx=first and (1+lastK+k2) or (n-lastK-k2); if idx>=1 and idx<=n and (r.lift[idx] or 0)<=4 then r.el[idx]+=delta*(1-k2/(K+1)) end end end
+  end
+ end end end
  G.roads=roads
  -- spatial index of segments
  local CELL=256; local grid={}
@@ -301,6 +315,7 @@ function G.writeTerrain(x0,x1,z0,z1,status)
      else mats[i][j][k]=M.Air; occ[i][j][k]=0 end
     end end end
   T:WriteVoxels(Region3.new(Vector3.new(cx,y0,cz),Vector3.new(cx+CH,y1,cz+CH)),RES,mats,occ)
+  T:FillBlock(CFrame.new(cx+CH/2,y1+400,cz+CH/2),Vector3.new(CH,800,CH),M.Air) -- clear any old terrain above the new surface
   done+=1; if status then status(done,total) end; task.wait()
  end end
 end
