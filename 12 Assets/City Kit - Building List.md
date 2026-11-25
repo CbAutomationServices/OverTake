@@ -41,7 +41,7 @@ Contact sheets: `12 Assets/Blender/renders/`.
 | Auto parts store | OT_AutoParts_A | 133723295269954 |
 | Gym | OT_Gym_A | 128671834889410 |
 | Laundromat | OT_Laundromat_A | 114749799004244 |
-| Car dealership (OverTake Motors) | OT_Dealership_A | 88435631026570 |
+| Car dealership (OverTake Motors) | OT_Dealership_A | 85838004614787 (v3, no lot cars) |
 
 ## Skyscrapers (downtown skyline)
 | Style | Model | Asset ID |
@@ -142,3 +142,8 @@ Contact sheets: `12 Assets/Blender/renders/`.
 - Colored glass (teal/green/blue/dark) is set to SmoothPlastic + reflectance 0.2 so its color shows. Roblox Glass washes it out.
 - Load assets with `game:GetObjects` into a ServerStorage hold folder, then fix 5–8 at a time with `task.wait()`.
 - Upload folder approved in Studio: `12 Assets/Blender`.
+
+## Where the models live now (2026-11-24)
+- Templates: `ServerStorage.OT_Kit` (one of each, scaled). The old gallery is parked in `ServerStorage.OT_KitGallery`.
+- Placed copies: `Workspace.HorizonValley.Buildings` and `.StreetProps`, filled by `ServerStorage.CityFill`.
+- Updating a model: export from Blender → PATCH the same asset (keeps the ID). Studio caches assets per session; if an update doesn't show, upload as a new asset instead.

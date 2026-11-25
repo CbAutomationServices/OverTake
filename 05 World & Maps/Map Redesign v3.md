@@ -70,6 +70,20 @@ The table below is the old (ring highway) concept, kept for reference; regions n
 3. Bridges/overpasses where roads cross, tunnels, guardrails.
 4. Venues, towns, trees (mesh trees, streamed), props.
 
+### 2026-11-24 · Step 2 Coast City filled ✅
+- City street grid widened to **440-stud blocks** (was 330) so the kit buildings fit 2×2 per block.
+- `ServerStorage.CityFill` places buildings by zone: **downtown** (skyscrapers, hotel, bank, parking garage) around the Garage/Police area, **mid-city** (tenements, brownstones, shops, apartments), **outer** (strip malls, gas, fast food, houses, motels), **industrial** by the drag strip (warehouses, factory).
+- Fixed spots: Player Garage, Police HQ, Dealership, Hospital, Landmark Tower.
+- 204 buildings across 75 blocks (24 blocks left empty where the freeway cuts through); ~1,480 street props (street lights, oak/palm trees, traffic lights, crosswalks); sidewalks on every street; grass inside mid/outer blocks, concrete plazas downtown.
+- Whole map is ~17k parts (budget 60k).
+- Re-run: `require(ServerStorage.CityFill:Clone()).run(workspace.HorizonValley)` then `.props(...)` (delete the old Buildings/StreetProps first). Same seed = same layout.
+
+### Next
+- Drive-test downtown; swap any building that faces the wrong way.
+- Overpasses where the freeway crosses city streets; guardrails on freeway/touge.
+- Venues: speedway (grandstand + pits), drag strip (start tower + bleachers), festival hub, lighthouse + pier on the coast.
+- Trees + rocks across the countryside, then the 4 small towns.
+
 ## Open questions
 - [ ] Sign off on the concept layout
 - [ ] Bay/water on which side?
