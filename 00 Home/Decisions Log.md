@@ -139,3 +139,5 @@
 | 2026-11-20 | Buildings are made in Blender with real PBR textures (Poly Haven, CC0) → imported as meshes. **At least 20 building types**: repeatable fillers + key buildings | 12 | Cristian |
 | 2026-11-20 | **Map v3 layout = Horizon Valley** (Forza Horizon-inspired): coast city in the SW, scenic highway loop through the countryside (NOT around the city), 4 small towns, lake, festival hub, forest off-road, speedway, north-peaks touge, 2 freeways; ring-highway concept dropped → `References/Map v3 - 3 Horizon Valley.png` | 05 | Cristian |
 | 2026-11-20 | **Map v3 build started:** old hub map (381k parts) moved to `ServerStorage.OldMap_v2_Backup` + old terrain saved as `ServerStorage.TerrainBackup_MapV2` (replaces the old OverTake_Hub as the live map); Horizon Valley blockout generated (terrain + ~5.6k road parts) | 05 | Cristian |
+
+- 2026-11-24 · Freeway runs as a raised viaduct (36 studs) through Coast City instead of at street level. Road parts raised 1.8 studs to sit on the terrain surface.

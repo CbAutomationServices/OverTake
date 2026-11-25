@@ -84,6 +84,23 @@ The table below is the old (ring highway) concept, kept for reference; regions n
 - Venues: speedway (grandstand + pits), drag strip (start tower + bleachers), festival hub, lighthouse + pier on the coast.
 - Trees + rocks across the countryside, then the 4 small towns.
 
+### 2026-11-24 · Step 3 World dressing ✅
+- **Freeway viaduct**: freeways rise 36 studs through Coast City on concrete piers with barriers and a deck (`G.LIFT`). Terrain isn't flattened under the viaduct anymore.
+- **Venues** (`WorldDressing.venues`): 2 grandstands + pit building + billboard at the Speedway; start tower + 10 bleachers at the Drag Strip; FestivalHub (Ferris wheel); Lighthouse; Pier pointing out to sea.
+- **4 small towns** (`WorldDressing.towns`): each has a main street off the nearest highway with ~20 buildings (gas station, diner, shops, church, houses, motel/trailers) and streetlights.
+- **Nature**: ~2,100 trees/bushes/rocks by terrain type (pine forests, oaks in fields, palms on beaches, rocks on mountains).
+- **Touge guardrails**: rails + posts along all 3 touge roads.
+- **Fix**: road parts sat ~1.7 studs under the terrain surface; all roads, sidewalks and rails raised 1.8 (now baked into `buildRoadParts`).
+- City ground repainted (downtown Concrete, mid/outer Grass, industrial Ground).
+- Part count ≈ 30.5k (budget 60k). Saved v82.
+- Scripts: [[HorizonValleyGen.lua]], [[WorldDressing.lua]] (ServerStorage).
+
+### Next
+- Flatten the Speedway infield (it rolls with the hills).
+- Towns feel sparse: add side streets/props, sidewalks.
+- Pier/lighthouse spot-check in a playtest drive.
+- Then: vehicle chassis (Phase 3 MVP).
+
 ## Open questions
 - [ ] Sign off on the concept layout
 - [ ] Bay/water on which side?

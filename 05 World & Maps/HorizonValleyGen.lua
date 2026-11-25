@@ -4,7 +4,7 @@ local G={}
 local S=10.9
 local function P(px,py) return Vector2.new((px-550)*S,(py-581)*S) end
 local function PL(t) local o={} for i=1,#t,2 do o[#o+1]=P(t[i],t[i+1]) end return o end
-G.SEA=0; G.LAKE=14
+G.SEA=0; G.LAKE=14; G.LIFT=36
 
 -- ROADS: {name, kind, width, points, closed, flat}
 G.ROADS={
@@ -22,7 +22,7 @@ G.ROADS={
 }
 -- City grid
 G.CITY_POLY=PL{160,770, 330,705, 470,690, 615,790, 612,872, 780,858, 792,1060, 330,1060, 270,960}
-G.CITY_STEP=330
+G.CITY_STEP=440
 -- Venues
 G.SPEEDWAY={c=P(682,572),rx=490,rz=305,width=54}
 G.DRAG={a=P(615,995),b=P(785,995),width=70}
@@ -96,6 +96,7 @@ local function detail(x,z,h)
 end
 
 -- ===== road geometry =====
+G.detail=detail
 local function catmull(pts,closed,spacing)
  local out={}; local n=#pts
  local function g(i) if closed then return pts[(i-1)%n+1] end return pts[math.clamp(i,1,n)] end
@@ -117,9 +118,29 @@ function G.buildRoadData()
   -- smooth elevations (several passes)
   if not flatElev then for pass=1,4 do local e2={} for i=1,#el do local s,c=0,0 for k=-6,6 do local j=i+k; if closed then j=(j-1)%#el+1 end; if el[j] then s+=el[j]; c+=1 end end e2[i]=s/c end el=e2 end end
   for i=1,#el do el[i]=math.max(el[i],G.SEA+3) end
-  roads[#roads+1]={name=name,kind=kind,width=width,pts=samples,el=el,closed=closed}
+  local lift={}
+  for i=1,#el do lift[i]=0 end
+  if kind=="Freeway" then
+   local w={}
+   for i,p in samples do local inside=inPoly(p,G.CITY_POLY); local d=polyEdgeDist(p,G.CITY_POLY); w[i]=inside and 1 or (1-sstep((d-150)/450)) end
+   for pass=1,3 do local w2={} for i=1,#w do local s_,c_=0,0 for k=-8,8 do if w[i+k] then s_+=w[i+k]; c_+=1 end end w2[i]=s_/c_ end w=w2 end
+   for i=1,#el do lift[i]=G.LIFT*sstep(w[i]); el[i]=el[i]+lift[i] end
+  end
+  roads[#roads+1]={name=name,kind=kind,width=width,pts=samples,el=el,closed=closed,lift=lift}
  end
  for _,r in G.ROADS do add(r[1],r[2],r[3],r[4],r[5]) end
+ -- town main streets: perpendicular to the nearest highway/freeway, starting at it
+ G.TOWN_STREETS={}
+ for ti,t in G.TOWNS do
+  local c=t[1]; local best,bd,bdir=1e9,nil,nil
+  for _,r in roads do if r.kind=="Highway" or r.kind=="Freeway" then
+   for i=1,#r.pts-1 do local a,b=r.pts[i],r.pts[i+1]; local d=(segDist(c,a,b)); if d<best then best=d; bdir=(b-a).Unit; bd=a end end end end
+  local perp=Vector2.new(-bdir.Y,bdir.X); if (c-bd):Dot(perp)<0 then perp=-perp end
+  local a=c-perp*math.min(best,250); local b=a+perp*560
+  local e=G.Hs(c.X,c.Y)
+  add("Town"..ti.."_Main","Avenue",34,{a,b},false,e)
+  G.TOWN_STREETS[ti]={a=a,b=b,dir=perp,el=e}
+ end
  -- city grid (axis aligned)
  local mn,mx=Vector2.new(1e9,1e9),Vector2.new(-1e9,-1e9)
  for _,p in G.CITY_POLY do mn=Vector2.new(math.min(mn.X,p.X),math.min(mn.Y,p.Y)); mx=Vector2.new(math.max(mx.X,p.X),math.max(mx.Y,p.Y)) end
@@ -140,6 +161,7 @@ function G.buildRoadData()
  local CELL=256; local grid={}
  for ri,r in roads do local n=#r.pts; local last=r.closed and n or n-1
   for i=1,last do local j=i%n+1; local a,b=r.pts[i],r.pts[j]; local R=r.width/2+60
+   if (r.lift[i] or 0)>4 or (r.lift[j] or 0)>4 then continue end
    local x0,x1=math.floor((math.min(a.X,b.X)-R)/CELL),math.floor((math.max(a.X,b.X)+R)/CELL)
    local z0,z1=math.floor((math.min(a.Y,b.Y)-R)/CELL),math.floor((math.max(a.Y,b.Y)+R)/CELL)
    for cx=x0,x1 do for cz=z0,z1 do local k=cx*100000+cz; grid[k]=grid[k] or {}; table.insert(grid[k],{a,b,r.el[i],r.el[j],r.width/2,r.kind}) end end end end
@@ -153,6 +175,7 @@ local function roadAt(x,z)
  return best,bd
 end
 
+G.roadAt=roadAt
 -- ===== column sampler: returns height, surface material, water level =====
 local M=Enum.Material
 function G.column(x,z)
@@ -219,9 +242,23 @@ function G.buildRoadParts(parent)
    local L=(b-a).Magnitude; if L>0.5 then
     local part=Instance.new("Part"); part.Anchored=true; part.Size=Vector3.new(r.width,2,L+r.width*0.12)
     part.CFrame=CFrame.lookAt((a+b)/2,b)*CFrame.new(0,-0.9,0); part.Color=cs[1]; part.Material=cs[2]; part.TopSurface=Enum.SurfaceType.Smooth
-    part.Name="Seg"..i; part.Parent=mdl end end
+    part.Name="Seg"..i; part.Parent=mdl
+    local li=(r.lift[i] or 0)
+    if li>4 then
+     local cf=CFrame.lookAt((a+b)/2,b)
+     for s_=-1,1,2 do local bar=Instance.new("Part"); bar.Anchored=true; bar.Size=Vector3.new(1.6,3.2,L+1); bar.CFrame=cf*CFrame.new(s_*(r.width/2-0.8),1.5,0); bar.Material=Enum.Material.Concrete; bar.Color=Color3.fromRGB(190,188,182); bar.Name="Barrier"; bar.Parent=mdl end
+     local cap=Instance.new("Part"); cap.Anchored=true; cap.Size=Vector3.new(r.width+2,3,L+1); cap.CFrame=cf*CFrame.new(0,-3.4,0); cap.Material=Enum.Material.Concrete; cap.Color=Color3.fromRGB(170,168,162); cap.Name="Deck"; cap.Parent=mdl
+     if i%3==0 then
+      local gy=a.Y-li
+      local h=(a.Y-5)-gy
+      if h>4 then for s_=-1,1,2 do local col=Instance.new("Part"); col.Shape=Enum.PartType.Cylinder; col.Anchored=true; col.Size=Vector3.new(h,7,7); col.CFrame=CFrame.new(a+cf.RightVector*s_*(r.width*0.28)+Vector3.new(0,-5-h/2,0))*CFrame.Angles(0,0,math.pi/2); col.Material=Enum.Material.Concrete; col.Color=Color3.fromRGB(176,174,168); col.Name="Pier"; col.Parent=mdl end end
+     end
+    end
+   end end
   mdl.Parent=f
  end end
+ -- terrain surface renders ~1.7 above el; lift road parts so they sit on top
+ for _,d in root:GetDescendants() do if d:IsA("BasePart") then d.CFrame=d.CFrame+Vector3.new(0,1.8,0) end end
  root.Parent=parent; return root
 end
 function G.buildMarkers(parent)
