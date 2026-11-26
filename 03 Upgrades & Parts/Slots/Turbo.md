@@ -53,7 +53,7 @@ The numbers are starting points for test drives (Step 3). Each car's config can 
 - **Switching paths:** buy the new path's part. Old ones stay in your inventory (swap in the Garage, car respawns: [[Architecture]] rule)
 - **Every car can run every path**, but each car has its own numbers per path (its "affinity")
 - **Twincharger** unlocks late (Rep level TBD) and costs the most
-- **HUD boost gauge:** yes. It's how players *see* the lag and the supercharger's instant response
+- **No boost gauge** on the HUD (keeps it clean). Players feel the lag through sound, camera and acceleration instead. The HUD gets designed last → [[HUD]]
 
 ## Ideas for later
 - **Anti-lag** add-on for turbos: keeps boost on lift, with pops and bangs (costs reliability or nitro refill?)

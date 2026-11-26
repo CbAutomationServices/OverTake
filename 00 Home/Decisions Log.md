@@ -146,3 +146,4 @@
 | 2026-11-25 | Default feel = grip-first + assisted drift (Heat); drift entry = brake-tap AND handbrake/Drift button; phones = auto-gas on by default | 03, 11 | Claude default, Cristian to confirm |
 | 2026-11-25 | First chassis car = **Hayate GT** (working name), prototype for Starter A (JDM, RWD, light, drifty) | 02 | Claude default, Cristian to confirm |
 | 2026-11-25 | Turbo slot = **6 boost paths** (Single Turbo, Twin Turbo, Roots, Twin-Screw, Centrifugal, Twincharger), each behaving like real life with clear pros/cons (lag vs instant, top end vs low end) → [[Turbo]] | 03, 11 | Cristian |
+| 2026-11-25 | **No boost gauge** on the HUD. HUD design comes last | 03, 10 | Cristian |
