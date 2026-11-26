@@ -145,3 +145,4 @@
 | 2026-11-25 | Chassis = single-body raycast/spherecast car, forces via impulses; start with driver network ownership, sim written Server-Authority-ready (Input Action System, fixed step) | 11 | Claude default, Cristian to confirm |
 | 2026-11-25 | Default feel = grip-first + assisted drift (Heat); drift entry = brake-tap AND handbrake/Drift button; phones = auto-gas on by default | 03, 11 | Claude default, Cristian to confirm |
 | 2026-11-25 | First chassis car = **Hayate GT** (working name), prototype for Starter A (JDM, RWD, light, drifty) | 02 | Claude default, Cristian to confirm |
+| 2026-11-25 | Turbo slot = **6 boost paths** (Single Turbo, Twin Turbo, Roots, Twin-Screw, Centrifugal, Twincharger), each behaving like real life with clear pros/cons (lag vs instant, top end vs low end) → [[Turbo]] | 03, 11 | Cristian |

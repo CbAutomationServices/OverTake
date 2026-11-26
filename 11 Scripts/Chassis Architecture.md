@@ -18,7 +18,7 @@ The chassis brief (2026-11-25) is built on top of what's already decided. Where 
 | Class tiers D → S+ | Tiers **C → B → A → S → SS → Z**, PR **60–500**, tier = race class, exact-tier races | [[Tiers]], [[Performance Rating]] |
 | PI (Performance Index) | **PR** (Performance Rating) = Base PR + (Max PR − Base PR) × weighted part levels; same function in garage + server | [[Performance Rating]] |
 | 6 parts (Engine, Turbo, Tires, Suspension, Transmission, Nitrous) | **7 slots**: + **Brakes**. 6 levels each: Stock → Street → Sport → Race → Pro → Elite | [[Part Levels]] |
-| Turbo spool vs supercharger | **One forced-induction slot: turbo OR supercharger**, each must feel different (variants: dual turbo, centrifugal) | Decisions 11-12 |
+| Turbo spool vs supercharger | **One forced-induction slot, 6 boost paths** (Single Turbo, Twin Turbo, Roots, Twin-Screw, Centrifugal, Twincharger), each with its real-life pros and cons | Decisions 11-12, 11-25 · [[Turbo]] |
 | Grip vs drift curve | Player tuning: **Grip ↔ Drift slider + Suspension stiffness**; tuning nudges PR slightly | [[Tuning]] |
 | Garage stats | **PR + tier badge, 4 bars (Speed, Accel, Handling, Nitro), 7 part chips** | [[Car Stats Explained]] |
 | ChassisRoot / rig names | Existing **[[Car Model Spec]]** names (Root, Body/Paint/Glass/Trim, Wheels/FL…, Lights, attachments); the brief's extras are added, not renamed | [[Car Model Spec]] |
@@ -129,9 +129,13 @@ GRIP ──(entry trigger at speed > driftMinSpeed)──► DRIFT ──(β < e
 - **Torque curve:** 5–7 points per car (RPM → torque), smoothly interpolated. Muscle = big low-end; JDM = peaky top-end.
 - **Drive force** = torque × gear × final drive × efficiency ÷ wheel radius, split to the driven wheels.
 - **Top speed** comes naturally from drag (∝ v²) vs drive force, plus a soft limiter at the car's `vMax` so tuning can't break it.
-- **Forced induction (one slot: turbo OR supercharger, decided):**
-  - **Turbo:** boost builds with lag: `boost += (target − boost)·(1 − e^(−dt/τ))`, where τ = spool time (single turbo slow, twin faster). Bigger top-end. Blow-off sound on lift
-  - **Supercharger:** boost ≈ instantly proportional to RPM (centrifugal = rises with RPM; roots = flat from low RPM). Whine sound
+- **Forced induction: 6 boost paths in one slot** (full table → [[Turbo]]): Single Turbo, Twin Turbo, Roots, Twin-Screw, Centrifugal, Twincharger. Every path is the same 5 settings in the sim, which is what gives each one its real-life pros and cons:
+  1. **Boost target from rpm and shape:** `0` below `startAt × redline` for turbos; flat for Roots; `(rpm/redline)²` for centrifugal; supercharger low + turbo top for the twincharger
+  2. **Spool lag (turbos):** `boost += (target − boost)·(1 − e^(−dt/spoolSec))`, only while on throttle and above `startAt`. Lift → boost bleeds away (blow-off). Shift → lose `shiftDump` of it
+  3. **Parasitic loss (superchargers):** `torque −= parasitic × (rpm/redline)²`. The belt eats power up top, so a supercharger fades where a turbo pulls
+  4. **Heat soak:** after ~8 s at full throttle, power fades by `heatSoak` (superchargers mostly), recovering off throttle
+  5. **Weight:** `weightAdd` makes the car slightly heavier (twincharger most)
+  - Final torque = engine curve × (1 + boost) − parasitic, so the same level on two paths gives about the same total power but a **different shape**. Same level = same PR
 - **Nitrous** (per car + Nitrous part):
   - **Burst:** big force for a short time, high FOV kick
   - **Sustained:** smaller force for longer
@@ -146,7 +150,7 @@ Every tunable stat in a car's config has a **stock** and an **elite** value. A p
 | Slot | Stats it moves |
 |---|---|
 | Engine | torque curve scale, redline |
-| Turbo / Supercharger | boost amount, spool τ (turbo), boost curve shape |
+| Turbo slot (6 boost paths) | boost amount, spool time; the path itself sets the shape, parasitic loss, shift dump, heat soak |
 | Transmission | gear ratios spacing, shift time, final drive |
 | Suspension | spring k, damping c, anti-roll, ride height, roll/pitch stiffness |
 | Brakes | brake force, front/rear bias, ABS strength |

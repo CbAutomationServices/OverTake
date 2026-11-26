@@ -38,7 +38,7 @@ Config: `ReplicatedStorage/Shared/Chassis/CarConfigs/Hayate` · Architecture: [[
 - **Weight & inertia:** light, low center of mass, 52/48 front/rear. Yaw inertia 0.85, so it changes direction fast. The body visibly rolls and pitches (FX roll 1.1) because it's soft on stock suspension.
 - **Grip vs drift:** decent grip peak (1.05 front / 1.0 rear on stock tires), with a gentle fall-off. Drifts start from 32 mph with brake-tap, handbrake, or just too much throttle mid-corner. While sliding the rear keeps 40–62% grip (by tuning slider), the angle holder is strong and counter-steer assist is 0.7, so it holds an angle without spinning.
 - **Powerband:** inline-4, 205 Nm stock with the torque peak at 5,600 rpm and a 7,600 redline (8,800 on Elite). Weak below 3,000 rpm, so you keep it high in the revs. Six gears, short final drive.
-- **Forced induction:** stock is naturally aspirated. The Turbo slot is where it comes alive: a single turbo spools in 1.2 s (0.6 s Elite) with a big top-end kick and blow-off pops. Twin turbo spools faster. A supercharger gives instant boost but less of it.
+- **Forced induction:** stock is naturally aspirated. Its affinity is the **Single Turbo** (+64% at Elite, a bit above average): a big top-end hit after 1.3 s of lag (0.95 s Elite). Roots or Twin-Screw make it a drift and city car (instant throttle). Centrifugal suits drag. All 6 paths → [[Turbo]]
 - **Nitrous:** Burst style, short and strong (2.5 s stock → 5.5 s Elite), with a 12° FOV kick.
 - **Top speed:** soft limit 128 mph stock → 205 mph Elite.
 - **Upgrade personality:** Tires and Suspension pay off the most on this car (it's a handling car). Engine and Turbo turn it from a slow toy into an A/S-tier contender.

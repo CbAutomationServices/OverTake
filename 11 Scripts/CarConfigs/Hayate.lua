@@ -89,14 +89,26 @@ return {
 		engineBrake = 0.12, -- G of decel when off throttle
 	},
 
-	induction = { -- owned by: Turbo slot (turbo OR supercharger, one at a time)
-		default = "Turbo",
-		allowed = { "Turbo", "TwinTurbo", "Supercharger", "CentrifugalSC" },
-		-- Stock = no boost (naturally aspirated). Boost = extra torque share on top of the engine.
-		Turbo = { boost = { stock = 0, elite = 0.6 }, spoolSec = { stock = 1.2, elite = 0.6 }, startRpm = 3000 },
-		TwinTurbo = { boost = { stock = 0, elite = 0.55 }, spoolSec = { stock = 0.8, elite = 0.4 }, startRpm = 2500 },
-		Supercharger = { boost = { stock = 0, elite = 0.45 }, curve = "flat" }, -- instant, flat from low rpm
-		CentrifugalSC = { boost = { stock = 0, elite = 0.5 }, curve = "rising" }, -- instant, grows with rpm
+	induction = { -- owned by: Turbo slot. ONE boost path at a time (see 03 Upgrades & Parts/Slots/Turbo.md)
+		-- Stock = no boost (naturally aspirated). Levels raise boost and cut spool; they never change a path's character.
+		--   startAt    = share of redline where boost can begin (turbos need exhaust flow)
+		--   spoolSec   = time to reach full boost (turbo lag). 0 = instant
+		--   shape      = "late" | "early" | "flat" | "flatRise" | "rising" | "twin" (twincharger: flat low, turbo top)
+		--   boost      = extra torque share at full boost
+		--   parasitic  = torque share the belt drive eats at redline (superchargers)
+		--   shiftDump  = share of boost lost on each gear change
+		--   heatSoak   = power fade after ~8 s flat out
+		--   weightAdd  = extra weight share (handling)
+		-- This car is a JDM tuner: its single turbo is a little stronger than average (its "affinity").
+		default = "SingleTurbo",
+		paths = {
+			SingleTurbo = { startAt = 0.55, spoolSec = { stock = 1.3, elite = 0.95 }, shape = "late", boost = { stock = 0, elite = 0.64 }, parasitic = 0, shiftDump = 0.35, heatSoak = 0, weightAdd = 0, sound = "TurboBig" },
+			TwinTurbo = { startAt = 0.4, spoolSec = { stock = 0.8, elite = 0.5 }, shape = "early", boost = { stock = 0, elite = 0.54 }, parasitic = 0, shiftDump = 0.2, heatSoak = 0, weightAdd = 0.01, sound = "TurboTwin" },
+			RootsSC = { startAt = 0, spoolSec = 0, shape = "flat", boost = { stock = 0, elite = 0.4 }, parasitic = 0.14, shiftDump = 0, heatSoak = 0.06, weightAdd = 0.02, sound = "WhineDeep" },
+			TwinScrewSC = { startAt = 0, spoolSec = 0, shape = "flatRise", boost = { stock = 0, elite = 0.44 }, parasitic = 0.08, shiftDump = 0, heatSoak = 0.04, weightAdd = 0.02, sound = "Whine" },
+			CentrifugalSC = { startAt = 0, spoolSec = 0, shape = "rising", boost = { stock = 0, elite = 0.56 }, parasitic = 0.04, shiftDump = 0, heatSoak = 0.02, weightAdd = 0.01, sound = "WhineRising" },
+			Twincharger = { startAt = 0, spoolSec = { stock = 0.8, elite = 0.6 }, shape = "twin", boost = { stock = 0, elite = 0.55 }, parasitic = 0.06, shiftDump = 0.1, heatSoak = 0.03, weightAdd = 0.04, sound = "WhineTurbo" },
+		},
 	},
 
 	transmission = { -- owned by: Transmission
@@ -140,7 +152,7 @@ return {
 	fx = {
 		rollFactor = 1.1, pitchFactor = 1.0, -- visual body motion (light car moves more)
 		exhaustPops = { upshift = true, liftOff = true, chance = 0.35 },
-		blowOff = true, -- when a turbo is fitted
+		blowOff = true, -- turbo paths only
 		smokeSlipDeg = 12, -- tire smoke starts at this rear slip
 		skidSlipDeg = 9,
 	},
