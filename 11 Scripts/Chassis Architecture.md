@@ -10,6 +10,21 @@ last-updated: 2026-11-25
 
 Our own arcade chassis (decided 2026-11-19), built so every car feels different from data alone. Links: [[Architecture]] · [[Car Stats]] · [[Car Model Spec]] · [[Performance Rating]] · [[Tuning]] · [[Part Levels]]
 
+## 0. Vault decisions this design follows (they stay)
+The chassis brief (2026-11-25) is built on top of what's already decided. Where the brief and the vault differ, **the vault wins**:
+
+| Brief said | Vault decision we keep | Source |
+|---|---|---|
+| Class tiers D → S+ | Tiers **C → B → A → S → SS → Z**, PR **60–500**, tier = race class, exact-tier races | [[Tiers]], [[Performance Rating]] |
+| PI (Performance Index) | **PR** (Performance Rating) = Base PR + (Max PR − Base PR) × weighted part levels; same function in garage + server | [[Performance Rating]] |
+| 6 parts (Engine, Turbo, Tires, Suspension, Transmission, Nitrous) | **7 slots**: + **Brakes**. 6 levels each: Stock → Street → Sport → Race → Pro → Elite | [[Part Levels]] |
+| Turbo spool vs supercharger | **One forced-induction slot: turbo OR supercharger**, each must feel different (variants: dual turbo, centrifugal) | Decisions 11-12 |
+| Grip vs drift curve | Player tuning: **Grip ↔ Drift slider + Suspension stiffness**; tuning nudges PR slightly | [[Tuning]] |
+| Garage stats | **PR + tier badge, 4 bars (Speed, Accel, Handling, Nitro), 7 part chips** | [[Car Stats Explained]] |
+| ChassisRoot / rig names | Existing **[[Car Model Spec]]** names (Root, Body/Paint/Glass/Trim, Wheels/FL…, Lights, attachments); the brief's extras are added, not renamed | [[Car Model Spec]] |
+| Hero starter car | **3 starters (JDM, Muscle, Euro)**, free pick; roster slots in [[Car Stats]]. Final starter names/models are still **decided last** (11-20), so the Step 2 car is the **prototype for Starter A (JDM)** | [[Car Stats]] |
+| Other | Own custom chassis (not A-Chassis) · no real brands/logos · launch 10–15 cars · cop AI uses the same chassis · Drift events post-launch (drifting still in the handling) · phones first | Decisions log |
+
 ## 1. The big picture
 
 ```
@@ -173,8 +188,9 @@ One note per car in `02 Cars/Roster/`, plus a master table in `_Car Index`:
 - Studs blueprint: length, width, height, wheelbase, front/rear track, wheel radius, ride height / fender gap
 - Rig checklist + a 4-view orthographic concept prompt (front, side, rear, top; flat background, neutral light; no real brands)
 
-## Open questions (asked 2026-11-25)
-- [ ] Default feel: grip-first with assisted drift (Heat) or drift-happy (Underground)?
-- [ ] Drift entry: brake-tap, handbrake, or both?
-- [ ] Which archetype is the hero starter car for Step 2?
-- [ ] Phone controls: auto-accelerate option, or always manual?
+## Defaults chosen (2026-11-25, change anytime)
+These follow the Heat inspiration and the decisions above. Each is one config value, so changing it later is cheap.
+- **Default feel:** grip-first with assisted drift (Heat). The Grip ↔ Drift slider lets any car go drift-happy
+- **Drift entry:** both. Brake-tap + steer (Heat style) **and** a handbrake / Drift button (needed on phones anyway)
+- **First car (Step 2):** prototype for **Starter A, JDM** (roster slot #1, Base PR 70 → Max 450)
+- **Phone controls:** Auto-gas **on by default on touch devices**, toggle in Settings. Manual on PC and gamepad

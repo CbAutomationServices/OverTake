@@ -141,3 +141,7 @@
 | 2026-11-20 | **Map v3 build started:** old hub map (381k parts) moved to `ServerStorage.OldMap_v2_Backup` + old terrain saved as `ServerStorage.TerrainBackup_MapV2` (replaces the old OverTake_Hub as the live map); Horizon Valley blockout generated (terrain + ~5.6k road parts) | 05 | Cristian |
 
 - 2026-11-24 · Freeway runs as a raised viaduct (36 studs) through Coast City instead of at street level. Road parts raised 1.8 studs to sit on the terrain surface.
+| 2026-11-25 | Chassis brief accepted on top of existing decisions (vault wins on tiers C→Z, PR, 7 slots, turbo-OR-supercharger, Grip↔Drift slider, Car Model Spec names) → [[Chassis Architecture]] | 02, 03, 11 | Cristian |
+| 2026-11-25 | Chassis = single-body raycast/spherecast car, forces via impulses; start with driver network ownership, sim written Server-Authority-ready (Input Action System, fixed step) | 11 | Claude default, Cristian to confirm |
+| 2026-11-25 | Default feel = grip-first + assisted drift (Heat); drift entry = brake-tap AND handbrake/Drift button; phones = auto-gas on by default | 03, 11 | Claude default, Cristian to confirm |
+| 2026-11-25 | First chassis car = **Hayate GT** (working name), prototype for Starter A (JDM, RWD, light, drifty) | 02 | Claude default, Cristian to confirm |
