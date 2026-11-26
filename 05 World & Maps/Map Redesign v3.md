@@ -126,6 +126,14 @@ The table below is the old (ring highway) concept, kept for reference; regions n
 - Visual spot-check of new junctions (Studio stopped responding during screenshots).
 - Vehicle chassis → drive-test.
 
+### 2026-11-25 · Step 6 Intersection cleanup ✅
+- Removed 48 old 2,000-stud sidewalk strips that ran straight across every intersection (they caused the tan bands across roads).
+- Removed the 143 kit crosswalk models (they had their own slab + curb ramps sitting on the road). Replaced them with painted zebra stripes and a stop line on every leg of all 82 grid intersections (folder `Crosswalks`). `CityFill.props` no longer places the kit crosswalk.
+- Coastal Blvd sidewalks rebuilt so they stop at each intersection (`BlvdSidewalks`).
+- Stripped the ground pads from trees (root/sand discs) and from street/traffic lights (14×14 slabs that poked into the road). Done for the templates too.
+- Leftover bare "pavement" terrain slivers between the loop highway and the city edge repainted grass.
+- Saved v92. Parts ≈ 35k.
+
 ## Open questions
 - [ ] Sign off on the concept layout
 - [ ] Bay/water on which side?
