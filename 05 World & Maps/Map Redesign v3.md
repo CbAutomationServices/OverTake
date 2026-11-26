@@ -113,6 +113,19 @@ The table below is the old (ring highway) concept, kept for reference; regions n
 - Flatten the Speedway infield.
 - Drive-test (needs the vehicle chassis): check building facing, curb heights, viaduct ramps.
 
+### 2026-11-24 · Step 5 Road network + terrain fixes ✅
+- **Every road now connects.** The EW freeway's mid-air west stub is gone. The north freeway joins the loop. New roads: Touge_Summit (N↔NE), Touge_West (NW↔Highway_West), Highway_East over the east mountain to the freeway. Touge ends land on the loop.
+- **Coastal Blvd** runs up to the loop. **Speedway_Access** and **Festival_Access** added. **Drag strip** has access and return roads, and city streets no longer cut across it (that's where the bleachers are).
+- City grid streets extend to the nearest road instead of dead-ending. Town main streets start on the highway and end in a cul-de-sac.
+- **Junction snapping**: road ends are leveled to the road they meet, then blended back. Grade cap: 18% on mountain roads, 8% elsewhere.
+- **Terrain**: roads carve 1 stud deeper (no more ground poking through). The terrain writer now clears old terrain above the new surface. The speedway infield is flat.
+- Audit: 54k road samples → 0 clipping, 0 holes. The only open ends are the festival entrance and the 4 town cul-de-sacs.
+- Parts ≈ 34.6k. Saved v90.
+
+### Next
+- Visual spot-check of new junctions (Studio stopped responding during screenshots).
+- Vehicle chassis → drive-test.
+
 ## Open questions
 - [ ] Sign off on the concept layout
 - [ ] Bay/water on which side?
